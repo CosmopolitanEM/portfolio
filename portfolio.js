@@ -34,7 +34,6 @@
               'Reduje el ciclo de caja en 28 días y los costes financieros un 23% con procedimientos estandarizados y tesorería centralizada en Asia.',
               'Generé más de 400K US$ de ahorro fiscal anual con estructuras de precios de transferencia conformes; unifiqué el reporting bajo JGAAP y HK GAAP.',
               'Guié a la empresa durante la COVID-19, protegiendo la liquidez y reasignando recursos frente a la caída de ingresos.'] } },
-    { gap: { en: '2017 – 2018 · Full-time Mandarin studies at National Taiwan University, Taipei', es: '2017 – 2018 · Estudios de mandarín a tiempo completo en la Universidad Nacional de Taiwán, Taipéi' } },
     { when: 'Jun 2016 – May 2017', whenEs: 'Jun 2016 – may 2017',
       en: { label: '3.3 · Rescue', t: 'CFO, U.S. subsidiary, Grupo Sesé', where: 'Chattanooga, Tennessee, USA · automotive supply chain',
         ctx: 'Promoted to CFO of the U.S. subsidiary of one of Europe\'s largest transport and logistics groups (revenue up to US$1B), with a mandate to avoid bankruptcy.',

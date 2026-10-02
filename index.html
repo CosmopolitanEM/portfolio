@@ -199,9 +199,9 @@
       </div>
       <div class="cover-grid">
         <div class="chart">
-          <h4><span data-i18n="cv_ch">Career, 2013–2026</span><span data-i18n="cv_ch2">five countries · three continents</span></h4>
+          <h4><span data-i18n="cv_ch">Career, 2013–2026</span><span data-i18n="cv_ch2">four countries · three continents</span></h4>
           <svg id="careerChart" viewBox="0 0 720 270" role="img" aria-label="Career timeline from 2013 to 2026 across Germany, Spain, the USA, Taiwan and Japan"></svg>
-          <p class="src" data-i18n="cv_src">Roles drawn to scale by start and end month.</p>
+          <p class="src" data-i18n="cv_src">Roles drawn to scale by year.</p>
         </div>
         <div>
           <div class="kf">
@@ -319,7 +319,6 @@
             <li><b data-i18n="e1">Executive Postgraduate, Financial Management</b><span>ESIC · 2015</span></li>
             <li><b data-i18n="e2">Degree in Business Administration (4-year)</b><span data-i18n="e2s">Univ. de Zaragoza · 2012</span></li>
             <li><b data-i18n="e3">Financial Advising and Wealth Management</b><span>CESTE · 2020</span></li>
-            <li><b data-i18n="e4">Full-time Mandarin studies</b><span data-i18n="e4s">National Taiwan University · 2017–18</span></li>
           </ul></div>
         <div class="note reveal"><h3><span>6.3</span><span data-i18n="nt3">Certifications and authorship</span></h3>
           <ul>
@@ -366,7 +365,7 @@ const T = { es: {
   run:"Informe anual 2026", n2:"Cifras clave", n3:"Trayectoria", n4:"Finanzas con IA", n6:"Notas", n7:"Contacto",
   cv_k:"Informe anual 2026", cv_loc:"Kaohsiung · Singapur o remoto desde Japón", cv_role:"CFE · Director financiero · APAC",
   cv_sub:"Trece años dirigiendo finanzas. Capital, reestructuraciones y una función financiera basada en IA.",
-  cv_ch:"Trayectoria, 2013–2026", cv_ch2:"cinco países · tres continentes", cv_src:"Puestos dibujados a escala por mes de inicio y fin.",
+  cv_ch:"Trayectoria, 2013–2026", cv_ch2:"cuatro países · tres continentes", cv_src:"Puestos dibujados a escala por año.",
   k1:"Años dirigiendo finanzas", k2:"Inversión estratégica liderada, 2026", k3:"Activos gestionados hoy", k4:"Crecimiento del EBT en una reestructuración",
   cta1:"Leer la trayectoria", cta2:"Contactar",
   c1:"01 · Carta", c1_t:"Del CFO, <em>al lector.</em>",
@@ -402,7 +401,7 @@ const T = { es: {
   cp5:"Captación de capital y equity story", cp6:"M&A transfronterizo y due diligence", cp7:"Estructuración de JV, SPE y operaciones", cp8:"Preparación para salida a bolsa o venta",
   cp9:"Reporting al consejo y gobierno", cp10:"Control interno y riesgo de fraude", cp11:"Herramientas de IA y automatización financiera", cp12:"Dirección de equipos distribuidos",
   e1:"Posgrado ejecutivo en Dirección Financiera", e2:"Licenciatura en Administración de Empresas (4 años)", e2s:"Univ. de Zaragoza · 2012", e3:"Asesoramiento Financiero y Gestión Patrimonial",
-  e4:"Estudios de mandarín a tiempo completo", e4s:"Universidad Nacional de Taiwán · 2017–18", au:"Autor de \"A to Z of Financial Terms\"",
+  au:"Autor de \"A to Z of Financial Terms\"",
   la1:"Español", la1s:"nativo", la2:"Inglés · Alemán", la2s:"fluido", la3:"Mandarín", la3s:"nivel profesional", la4:"Italiano", la4s:"básico", sy:"Sistemas",
   c7:"07 · Relación con inversores", ir_t:"¿Buscas un CFO <em>para Asia?</em>",
   ir_p:"Estoy abierto a puestos de CFO en grupos multisociedad en APAC, desde Singapur o en remoto desde Japón. Encantado de repasar cualquier cifra de este informe en una llamada.",
@@ -418,8 +417,7 @@ window.drawCareer = function(){
   const ROLES = [
     [2013 + 4/12, 2014 + 5/12, 'Financial Controller · Grupo Sesé', 'Frankfurt', '#9AA8BC'],
     [2014 + 5/12, 2016 + 5/12, 'Deputy CFO · Grupo Sesé HQ', 'Zaragoza', '#5B7BA8'],
-    [2016 + 5/12, 2017 + 5/12, es ? 'CFO filial EE. UU. · Grupo Sesé' : 'CFO, U.S. subsidiary · Grupo Sesé', 'Chattanooga', '#5B7BA8'],
-    [2017 + 5/12, 2018, es ? 'Mandarín · NTU' : 'Mandarin · NTU', es ? 'Taipéi' : 'Taipei', '#D6DBE3'],
+    [2016 + 5/12, 2018, es ? 'CFO filial EE. UU. · Grupo Sesé' : 'CFO, U.S. subsidiary · Grupo Sesé', 'Chattanooga', '#5B7BA8'],
     [2018, 2023 + 8/12, 'CFO · GoGo World', es ? 'Tokio' : 'Tokyo', '#1B3A6B'],
     [2023 + 8/12, 2026 + 9/12, 'CFO · Wayfarer', es ? 'Kioto' : 'Kyoto', '#2F6FED']
   ];
@@ -456,7 +454,7 @@ if ('IntersectionObserver' in window && !reduce) io = new IntersectionObserver(e
 window.PrizmaReveal = els => els.forEach(el => { el.classList.add('reveal'); io ? io.observe(el) : el.classList.add('shown'); });
 </script>
 <script src="previews.js?v=3"></script>
-<script src="portfolio.js?v=3"></script>
+<script src="portfolio.js?v=4"></script>
 <script>
 let saved = null; try { saved = localStorage.getItem('jm-lang'); } catch(e){}
 setLang(saved === 'es' ? 'es' : 'en');
