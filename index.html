@@ -115,6 +115,11 @@
   .ai-points div{background:var(--sheet);padding:22px}
   .ai-points b{display:block;font:500 34px var(--serif);color:var(--signal);line-height:1.1;margin-bottom:6px}
   .ai-points span{font-size:14.5px;color:var(--body)}
+  .sub-h{margin:56px 0 24px;border-top:1px solid var(--ink);padding-top:16px;display:grid;grid-template-columns:200px 1fr;gap:40px}
+  .sub-h h3{font:500 26px/1.15 var(--serif);margin:0}
+  .sub-h p{margin:0;color:var(--steel);max-width:62ch}
+  .tool .tag{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--navy)}
+  .tool .tag.concept{color:var(--steel)}
   .tools{display:grid;grid-template-columns:1fr 1fr;gap:28px}
   .tool figure{margin:0}
   .tool .frame{background:var(--sheet);border:1px solid var(--mist);padding:10px}
@@ -150,7 +155,7 @@
 
   @media (max-width:1000px){
     .cover-grid,.ir,.notes,.tools{grid-template-columns:1fr}
-    .ch,.letter,.seg{grid-template-columns:1fr;gap:20px}
+    .ch,.letter,.seg,.sub-h{grid-template-columns:1fr;gap:20px}
     .ai-points{grid-template-columns:1fr}
     .links a.hide-m{display:none}
     section{padding:72px 0}
@@ -175,8 +180,8 @@
       <a class="run" href="#top"><b>Javier Munoz, CFE</b><span class="long"> · <span data-i18n="run">Annual Report 2026</span></span></a>
       <div class="links">
         <a class="hide-m" href="#figures" data-i18n="n2">Key figures</a>
+        <a class="hide-m" href="#ai" data-i18n="n4">Deliverables</a>
         <a class="hide-m" href="#career" data-i18n="n3">Career</a>
-        <a class="hide-m" href="#ai" data-i18n="n4">AI-first finance</a>
         <a class="hide-m" href="#notes" data-i18n="n6">Notes</a>
         <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" class="on">EN</button><button type="button" data-lang="es">ES</button></div>
         <a class="btn solid" href="#contact" data-i18n="n7">Contact</a>
@@ -212,7 +217,7 @@
             <div><span data-i18n="k5">Group revenue, Grupo Sesé (up to)</span><b>US$1B</b></div>
           </div>
           <div class="cover-cta">
-            <a class="btn solid" href="#career"><span data-i18n="cta1">Read the career review</span><span>→</span></a>
+            <a class="btn solid" href="#ai"><span data-i18n="cta1">See the deliverables</span><span>→</span></a>
             <a class="btn line" href="#contact" data-i18n="cta2">Get in touch</a>
           </div>
         </div>
@@ -249,38 +254,40 @@
         <table class="fig">
           <thead><tr><th data-i18n="t_m">Measure</th><th class="r" data-i18n="t_v">Figure</th><th data-i18n="t_n">Note</th></tr></thead>
           <tbody>
-            <tr><td><span data-i18n="m1">Strategic corporate investment: business plan and due diligence</span><small data-i18n="m1s">At a ¥2.7B valuation, backed by a self-built business plan · 2026</small></td><td class="r hl">¥200M</td><td class="n">3.1</td></tr>
-            <tr><td><span data-i18n="m2">Assets under management</span><small data-i18n="m2s">13 hotel properties, three brands · current role</small></td><td class="r">US$200M+</td><td class="n">3.1</td></tr>
-            <tr><td><span data-i18n="m3">Return on investment, year on year</span><small data-i18n="m3s">Asset-performance management and capital reallocation</small></td><td class="r">+7%</td><td class="n">3.1</td></tr>
-            <tr><td><span data-i18n="m4">EBT growth after two years of decline</span><small data-i18n="m4s">Turnaround and owner's exit · GoGo World</small></td><td class="r hl">+4,500%</td><td class="n">3.2</td></tr>
-            <tr><td><span data-i18n="m5">Annual tax savings</span><small data-i18n="m5s">Compliant transfer-pricing structures across Asia</small></td><td class="r">US$400K+</td><td class="n">3.2</td></tr>
-            <tr><td><span data-i18n="m6">Cash-to-cash cycle</span><small data-i18n="m6s">Centralised cash management · financial costs −23%</small></td><td class="r" data-i18n="m6v">−28 days</td><td class="n">3.2</td></tr>
-            <tr><td><span data-i18n="m10">Group revenue</span><small data-i18n="m10s">Up to US$1B · Deputy CFO at HQ, 10+ countries · Grupo Sesé</small></td><td class="r">US$1B</td><td class="n">3.4</td></tr>
-            <tr><td><span data-i18n="m7">Syndicated financing modelled</span><small data-i18n="m7s">Dynamic model forecasting the loan's impact · Grupo Sesé</small></td><td class="r">€80M</td><td class="n">3.4</td></tr>
-            <tr><td><span data-i18n="m8">Acquisitions completed</span><small data-i18n="m8s">Europe and the Americas, integrated into IFRS consolidation</small></td><td class="r">4+</td><td class="n">3.4</td></tr>
-            <tr><td><span data-i18n="m9">Time to produce a management report</span><small data-i18n="m9s">Automated with AI-built tools · current role</small></td><td class="r" data-i18n="m9v">&lt; 30 s</td><td class="n">4</td></tr>
+            <tr><td><span data-i18n="m1">Strategic corporate investment: business plan and due diligence</span><small data-i18n="m1s">At a ¥2.7B valuation, backed by a self-built business plan · 2026</small></td><td class="r hl">¥200M</td><td class="n">4.1</td></tr>
+            <tr><td><span data-i18n="m2">Assets under management</span><small data-i18n="m2s">13 hotel properties, three brands · current role</small></td><td class="r">US$200M+</td><td class="n">4.1</td></tr>
+            <tr><td><span data-i18n="m3">Return on investment, year on year</span><small data-i18n="m3s">Asset-performance management and capital reallocation</small></td><td class="r">+7%</td><td class="n">4.1</td></tr>
+            <tr><td><span data-i18n="m4">EBT growth after two years of decline</span><small data-i18n="m4s">Turnaround and owner's exit · GoGo World</small></td><td class="r hl">+4,500%</td><td class="n">4.2</td></tr>
+            <tr><td><span data-i18n="m5">Annual tax savings</span><small data-i18n="m5s">Compliant transfer-pricing structures across Asia</small></td><td class="r">US$400K+</td><td class="n">4.2</td></tr>
+            <tr><td><span data-i18n="m6">Cash-to-cash cycle</span><small data-i18n="m6s">Centralised cash management · financial costs −23%</small></td><td class="r" data-i18n="m6v">−28 days</td><td class="n">4.2</td></tr>
+            <tr><td><span data-i18n="m10">Group revenue</span><small data-i18n="m10s">Up to US$1B · Deputy CFO at HQ, 10+ countries · Grupo Sesé</small></td><td class="r">US$1B</td><td class="n">4.4</td></tr>
+            <tr><td><span data-i18n="m7">Syndicated financing modelled</span><small data-i18n="m7s">Dynamic model forecasting the loan's impact · Grupo Sesé</small></td><td class="r">€80M</td><td class="n">4.4</td></tr>
+            <tr><td><span data-i18n="m8">Acquisitions completed</span><small data-i18n="m8s">Europe and the Americas, integrated into IFRS consolidation</small></td><td class="r">4+</td><td class="n">4.4</td></tr>
+            <tr><td><span data-i18n="m9">Time to produce a management report</span><small data-i18n="m9s">Automated with AI-built tools · current role</small></td><td class="r" data-i18n="m9v">&lt; 30 s</td><td class="n">3</td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </section>
 
-  <section id="career">
-    <div class="wrap">
-      <div class="ch"><div class="no" data-i18n="c3">03 · Career review</div><div><h2 data-i18n-html="c3_t">Five roles, <em>three continents.</em></h2><p data-i18n="c3_p">Each role is reported like a segment: the context I walked into and what changed while I was there.</p></div></div>
-      <div id="career-list"></div>
-    </div>
-  </section>
-
   <section id="ai">
     <div class="wrap">
-      <div class="ch"><div class="no" data-i18n="c4">04 · Innovation</div><div><h2 data-i18n-html="c4_t">An AI-first <em>finance function.</em></h2><p data-i18n="c4_p">I don't buy a tool for every problem. I build the ones my team needs with Claude, train the team to use them with judgment, and keep controls in every one. The figures below are live animations shown with sample data.</p></div></div>
+      <div class="ch"><div class="no" data-i18n="c4">03 · Deliverables</div><div><h2 data-i18n-html="c4_t">An AI-first <em>finance function.</em></h2><p data-i18n="c4_p">I don't buy a tool for every problem. I build the ones my team needs with Claude, train the team to use them with judgment, and keep controls in every one. The figures below are live animations shown with sample data.</p></div></div>
       <div class="ai-points reveal">
         <div><b data-i18n="ap1">&lt; 30 s</b><span data-i18n="ap1d">to produce a management report, with automation built in-house with AI</span></div>
         <div><b data-i18n="ap2">Mandatory</b><span data-i18n="ap2d">Anthropic AI training for the accounting team; AI fluency is a hiring criterion</span></div>
         <div><b>1</b><span data-i18n="ap3d">reconciled P&amp;L and KPI dataset for 13 properties, feeding the group's AI analytics platform</span></div>
       </div>
       <div class="tools" id="tool-list"></div>
+      <div class="sub-h reveal"><h3 data-i18n="cn_t">Reports I would bring next</h3><p data-i18n="cn_p">Concepts, not yet built: the reporting I would set up in the first 90 days of a new role, using the same approach. Shown with sample data.</p></div>
+      <div class="tools" id="concept-list"></div>
+    </div>
+  </section>
+
+  <section id="career">
+    <div class="wrap">
+      <div class="ch"><div class="no" data-i18n="c3">04 · Career review</div><div><h2 data-i18n-html="c3_t">Five roles, <em>three continents.</em></h2><p data-i18n="c3_p">Each role is reported like a segment: the context I walked into and what changed while I was there.</p></div></div>
+      <div id="career-list"></div>
     </div>
   </section>
 
@@ -362,12 +369,12 @@
 
 <script>
 const T = { es: {
-  run:"Informe anual 2026", n2:"Cifras clave", n3:"Trayectoria", n4:"Finanzas con IA", n6:"Notas", n7:"Contacto",
+  run:"Informe anual 2026", n2:"Cifras clave", n3:"Trayectoria", n4:"Entregables", n6:"Notas", n7:"Contacto",
   cv_k:"Informe anual 2026", cv_loc:"Kaohsiung, Taiwán", cv_role:"CFE · Director financiero · APAC",
   cv_sub:"Trece años dirigiendo finanzas. Capital, reestructuraciones y una función financiera basada en IA.",
   cv_ch:"Trayectoria, 2013–2026", cv_ch2:"cuatro países · tres continentes", cv_src:"Puestos dibujados a escala por año.",
   k1:"Años dirigiendo finanzas", k2:"Inversión estratégica, plan de negocio y due diligence, 2026", k3:"Activos gestionados hoy", k4:"Crecimiento del EBT en una reestructuración", k5:"Facturación del grupo, Grupo Sesé (hasta)",
-  cta1:"Leer la trayectoria", cta2:"Contactar",
+  cta1:"Ver los entregables", cta2:"Contactar",
   c1:"01 · Carta", c1_t:"Del CFO, <em>al lector.</em>",
   as1:"Residencia", as1v:"Kaohsiung, Taiwán", as3:"Idiomas", as3v:"Español, inglés, alemán, mandarín, italiano", as4:"Normativas",
   l1:"Durante trece años he dirigido finanzas donde más cuesta: grupos multisociedad, varias jurisdicciones y momentos en los que los números deciden si una empresa se financia, se vende o se salva. Los últimos ocho años, en Asia: Japón, Hong Kong y Corea.",
@@ -384,8 +391,9 @@ const T = { es: {
   m10:"Facturación del grupo", m10s:"Hasta 1.000 M US$ · Deputy CFO en la central, 10+ países · Grupo Sesé", m7:"Financiación sindicada modelada", m7s:"Modelo dinámico del impacto del préstamo · Grupo Sesé",
   m8:"Adquisiciones completadas", m8s:"Europa y América, integradas en la consolidación NIIF",
   m9:"Tiempo para generar un informe de gestión", m9s:"Automatizado con herramientas hechas con IA · puesto actual",
-  c3:"03 · Trayectoria", c3_t:"Cinco puestos, <em>tres continentes.</em>", c3_p:"Cada puesto se presenta como un segmento: el contexto que me encontré y lo que cambió mientras estuve.",
-  c4:"04 · Innovación", c4_t:"Una función financiera <em>basada en IA.</em>",
+  c3:"04 · Trayectoria", c3_t:"Cinco puestos, <em>tres continentes.</em>", c3_p:"Cada puesto se presenta como un segmento: el contexto que me encontré y lo que cambió mientras estuve.",
+  c4:"03 · Entregables", c4_t:"Una función financiera <em>basada en IA.</em>",
+  cn_t:"Los informes que llevaría después", cn_p:"Conceptos, aún no construidos: el reporting que montaría en los primeros 90 días de un puesto nuevo, con el mismo método. Con datos de ejemplo.",
   c4_p:"No compro una herramienta para cada problema. Construyo con Claude las que necesita mi equipo, le formo para usarlas con criterio y mantengo el control en todas. Las figuras son animaciones en vivo con datos de ejemplo.",
   ap1d:"para generar un informe de gestión, con automatización construida internamente con IA",
   ap2:"Obligatoria", ap2d:"formación en IA de Anthropic para el equipo contable; la soltura con IA es criterio de contratación",
@@ -452,8 +460,8 @@ let io = null;
 if ('IntersectionObserver' in window && !reduce) io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('shown'); io.unobserve(e.target); } }), {threshold:.1});
 window.PrizmaReveal = els => els.forEach(el => { el.classList.add('reveal'); io ? io.observe(el) : el.classList.add('shown'); });
 </script>
-<script src="previews.js?v=3"></script>
-<script src="portfolio.js?v=5"></script>
+<script src="previews.js?v=4"></script>
+<script src="portfolio.js?v=6"></script>
 <script>
 let saved = null; try { saved = localStorage.getItem('jm-lang'); } catch(e){}
 setLang(saved === 'es' ? 'es' : 'en');

@@ -111,7 +111,7 @@
       v.forEach((h, i) => { const p = prog(t % 2.4, .9, 1.8); if (i / 7 > p) return; const x = X + 79 + i * 64, y = Y + 330 - h * 2.2; i ? g.lineTo(x, y) : g.moveTo(x, y); }); g.stroke();
     } else {
       txt(g, L('Decisions requested', 'Decisiones a aprobar'), X + 40, Y + 70, 30, N, 800, DISP);
-      [[L('Approve FY27 budget', 'Aprobar presupuesto FY27'), 'A'], [L('Refinance facility B', 'Refinanciar línea B'), 'B'], [L('New site: Lisbon', 'Nueva ubicación: Lisboa'), 'C']].forEach(([s, k], i) => {
+      [[L('Approve FY27 budget', 'Aprobar presupuesto FY27'), 'A'], [L('Refinance facility B', 'Refinanciar línea B'), 'B'], [L('Sign the Hotel 14 lease', 'Firmar el arrendamiento del Hotel 14'), 'C']].forEach(([s, k], i) => {
         const p = eo(prog(t % 2.4, .3 + i * .25, .8 + i * .25)); g.globalAlpha = p;
         rr(g, X + 40, Y + 108 + i * 84, SW - 80, 64, 10); g.fillStyle = '#EEF1F5'; g.fill();
         txt(g, k, X + 66, Y + 150 + i * 84, 22, C.orange, 800, DISP); txt(g, s, X + 100, Y + 148 + i * 84, 19, N, 600);
