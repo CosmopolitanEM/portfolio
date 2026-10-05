@@ -465,7 +465,7 @@ if ('IntersectionObserver' in window && !reduce) io = new IntersectionObserver(e
 window.PrizmaReveal = els => els.forEach(el => { el.classList.add('reveal'); io ? io.observe(el) : el.classList.add('shown'); });
 </script>
 <script src="previews.js?v=5"></script>
-<script src="portfolio.js?v=8"></script>
+<script src="portfolio.js?v=9"></script>
 <script>
 let saved = null; try { saved = localStorage.getItem('jm-lang'); } catch(e){}
 setLang(saved === 'es' ? 'es' : 'en');
