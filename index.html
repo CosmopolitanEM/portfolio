@@ -61,11 +61,12 @@
   .chart h4{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--steel);display:flex;justify-content:space-between;gap:12px}
   .chart svg{display:block;width:100%;height:auto;margin-top:10px;overflow:visible}
   .chart .src{font:400 11px var(--mono);color:var(--steel);margin-top:4px}
-  .kf{border-top:2px solid var(--ink)}
-  .kf div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:9px 0;border-bottom:1px solid var(--mist)}
-  .kf span{font-size:14.5px;color:var(--steel)}
-  .kf b{font:500 32px var(--serif);color:var(--ink);white-space:nowrap}
+  .kf{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .kf div{background:var(--sheet);border:1px solid var(--mist);border-top:2px solid var(--ink);padding:10px 14px;display:flex;flex-direction:column;gap:4px}
+  .kf div:first-child{grid-column:1/-1;flex-direction:row;align-items:baseline;gap:14px}
+  .kf b{font:500 30px/1.05 var(--serif);color:var(--ink);white-space:nowrap;order:-1}
   .kf b.hl{color:var(--signal)}
+  .kf span{font-size:13px;line-height:1.35;color:var(--steel)}
   .cover-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
 
   section{padding:56px 0;border-bottom:1px solid var(--mist)}
@@ -430,7 +431,7 @@ window.drawCareer = function(){
     [2014 + 5/12, 2016 + 5/12, 'Deputy CFO · Grupo Sesé HQ', 'Zaragoza', '#5B7BA8'],
     [2016 + 5/12, 2018, es ? 'CFO filial EE. UU. · Grupo Sesé' : 'CFO, U.S. subsidiary · Grupo Sesé', 'Chattanooga', '#5B7BA8'],
     [2018, 2023 + 8/12, 'CFO · GoGo World', es ? 'Tokio' : 'Tokyo', '#1B3A6B'],
-    [2023 + 8/12, 2026 + 9/12, 'CFO · Wayfarer', es ? 'Kioto' : 'Kyoto', '#2F6FED']
+    [2023 + 8/12, 2026 + 9/12, 'CFO · Wayfarer', es ? 'Tokio' : 'Tokyo', '#2F6FED']
   ];
   const L = 12, R = 708, top = 16, row = 34, x = y => L + (y - 2013) / (2026.83 - 2013) * (R - L);
   let s = '';
@@ -465,7 +466,7 @@ if ('IntersectionObserver' in window && !reduce) io = new IntersectionObserver(e
 window.PrizmaReveal = els => els.forEach(el => { el.classList.add('reveal'); io ? io.observe(el) : el.classList.add('shown'); });
 </script>
 <script src="previews.js?v=5"></script>
-<script src="portfolio.js?v=9"></script>
+<script src="portfolio.js?v=10"></script>
 <script>
 let saved = null; try { saved = localStorage.getItem('jm-lang'); } catch(e){}
 setLang(saved === 'es' ? 'es' : 'en');

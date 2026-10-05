@@ -3,7 +3,7 @@
 (() => {
   const CAREER = [
     { when: 'Sep 2023 – Present', whenEs: 'Sep 2023 – actualidad',
-      en: { label: '4.1 · Current role', t: 'Chief Financial Officer, Wayfarer', where: 'Kyoto, Japan · hospitality investment group',
+      en: { label: '4.1 · Current role', t: 'Chief Financial Officer, Wayfarer', where: 'Tokyo, Japan · hospitality investment group',
         ctx: 'US$200M+ in assets across 13 properties and three brands, proprietary hotel technology, F&B and development JVs. Member of the executive team, leading a finance team of five plus external advisors across jurisdictions.',
         kpi: [['US$1.3M', 'strategic investment, US$18M valuation'], ['+7%', 'ROI year on year'], ['< 30 s', 'per management report']],
         pts: ['Built the group business plan and financial model behind a US$1.3M strategic corporate investment at a US$18M valuation, and led the investor\'s financial and operational due diligence.',
@@ -11,7 +11,7 @@
               'Built the board reporting, valuation and KPI framework behind the group\'s capital raising and IPO/exit readiness, aligned with public-company governance standards.',
               'Structured joint ventures and development projects through project-specific SPEs; owns audit preparation and Japanese statutory filings across multiple entities.',
               'Drove AI adoption across finance: in-house tools built with Claude, mandatory AI training for the team, and reporting automated to under 30 seconds per report.'] },
-      es: { label: '4.1 · Puesto actual', t: 'Director financiero, Wayfarer', where: 'Kioto, Japón · grupo de inversión hotelera',
+      es: { label: '4.1 · Puesto actual', t: 'Director financiero, Wayfarer', where: 'Tokio, Japón · grupo de inversión hotelera',
         ctx: 'Más de 200 M US$ en activos, 13 hoteles y tres marcas, tecnología hotelera propia, restauración y joint ventures de desarrollo. Miembro del comité de dirección, con un equipo financiero de cinco personas y asesores externos en varias jurisdicciones.',
         kpi: [['1,3 M US$', 'inversión estratégica, valoración 18 M US$'], ['+7%', 'ROI interanual'], ['< 30 s', 'por informe de gestión']],
         pts: ['Construí el plan de negocio y el modelo financiero del grupo detrás de una inversión corporativa estratégica de 1,3 M US$ a una valoración de 18 M US$, y lideré la due diligence financiera y operativa del inversor.',
