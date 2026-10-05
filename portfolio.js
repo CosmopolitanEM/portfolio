@@ -5,16 +5,16 @@
     { when: 'Sep 2023 – Present', whenEs: 'Sep 2023 – actualidad',
       en: { label: '4.1 · Current role', t: 'Chief Financial Officer, Wayfarer', where: 'Kyoto, Japan · hospitality investment group',
         ctx: 'US$200M+ in assets across 13 properties and three brands, proprietary hotel technology, F&B and development JVs. Member of the executive team, leading a finance team of five plus external advisors across jurisdictions.',
-        kpi: [['¥200M', 'strategic investment at a ¥2.7B valuation: business plan and due diligence'], ['+7%', 'ROI year on year'], ['< 30 s', 'per management report']],
-        pts: ['Built the group business plan and financial model behind a ¥200M strategic corporate investment at a ¥2.7B valuation, and led the investor\'s financial and operational due diligence.',
+        kpi: [['US$1.3M', 'strategic investment at a US$18M valuation: business plan and due diligence'], ['+7%', 'ROI year on year'], ['< 30 s', 'per management report']],
+        pts: ['Built the group business plan and financial model behind a US$1.3M strategic corporate investment at a US$18M valuation, and led the investor\'s financial and operational due diligence.',
               'Leading the due diligence of an ongoing liquidity event (confidential): designed the response structure and answered every finance and operating question for the counterparty.',
               'Built the board reporting, valuation and KPI framework behind the group\'s capital raising and IPO/exit readiness, aligned with public-company governance standards.',
               'Structured joint ventures and development projects through project-specific SPEs; owns audit preparation and Japanese statutory filings across multiple entities.',
               'Drove AI adoption across finance: in-house tools built with Claude, mandatory AI training for the team, and reporting automated to under 30 seconds per report.'] },
       es: { label: '4.1 · Puesto actual', t: 'Director financiero, Wayfarer', where: 'Kioto, Japón · grupo de inversión hotelera',
         ctx: 'Más de 200 M US$ en activos, 13 hoteles y tres marcas, tecnología hotelera propia, restauración y joint ventures de desarrollo. Miembro del comité de dirección, con un equipo financiero de cinco personas y asesores externos en varias jurisdicciones.',
-        kpi: [['¥200M', 'de inversión estratégica a una valoración de ¥2.700M: plan de negocio y due diligence'], ['+7%', 'ROI interanual'], ['< 30 s', 'por informe de gestión']],
-        pts: ['Construí el plan de negocio y el modelo financiero del grupo detrás de una inversión corporativa estratégica de ¥200M a una valoración de ¥2.700M, y lideré la due diligence financiera y operativa del inversor.',
+        kpi: [['1,3 M US$', 'de inversión estratégica a una valoración de 18 M US$: plan de negocio y due diligence'], ['+7%', 'ROI interanual'], ['< 30 s', 'por informe de gestión']],
+        pts: ['Construí el plan de negocio y el modelo financiero del grupo detrás de una inversión corporativa estratégica de 1,3 M US$ a una valoración de 18 M US$, y lideré la due diligence financiera y operativa del inversor.',
               'Lidero la due diligence de un evento de liquidez en curso (confidencial): diseñé la estructura de respuesta y respondí todas las preguntas financieras y operativas de la contraparte.',
               'Construí el reporting al consejo, la valoración y el marco de KPIs para la captación de capital y la preparación para salida a bolsa o venta, con estándares de empresa cotizada.',
               'Estructuré joint ventures y proyectos de desarrollo mediante SPEs por proyecto; responsable de la preparación de auditorías y de las obligaciones legales japonesas en varias sociedades.',
@@ -52,16 +52,16 @@
     { when: 'Jun 2014 – May 2016', whenEs: 'Jun 2014 – may 2016',
       en: { label: '4.4 · Group finance and M&A', t: 'Deputy CFO, Grupo Sesé HQ', where: 'Zaragoza, Spain · 7+ European and 3+ American subsidiaries',
         ctx: 'Promoted to headquarters one year after joining, to create the financial shared-service centre and set financial strategy for the foreign subsidiaries.',
-        kpi: [['4+', 'acquisitions completed'], ['€80M', 'syndicated loan modelled'], ['€200K', 'saved per year in accounting']],
+        kpi: [['4+', 'acquisitions completed'], ['US$88M', 'syndicated loan modelled'], ['US$220K', 'saved per year in accounting']],
         pts: ['Completed 4+ M&A transactions across Europe and the Americas; built the group\'s valuation model and integrated each acquisition into the IFRS consolidated statements.',
-              'Designed, built and tracked the dynamic financial model used to forecast the impact of an €80M syndicated loan.',
+              'Designed, built and tracked the dynamic financial model used to forecast the impact of an US$88M syndicated loan.',
               'With the CFO, unified reporting for 10+ countries: group chart of accounts and consistent IFRS across all branches.',
               'Cut accounting costs 73% in Poland and 48% in Germany through the shared-service model; led the Navision roll-out in the USA, Mexico and the UK.'] },
       es: { label: '4.4 · Finanzas de grupo y M&A', t: 'Deputy CFO, central de Grupo Sesé', where: 'Zaragoza, España · 7+ filiales europeas y 3+ americanas',
         ctx: 'Ascendido a la central un año después de incorporarme, para crear el centro de servicios financieros compartidos y fijar la estrategia financiera de las filiales extranjeras.',
-        kpi: [['4+', 'adquisiciones completadas'], ['80 M€', 'de préstamo sindicado modelado'], ['200K €', 'de ahorro anual en contabilidad']],
+        kpi: [['4+', 'adquisiciones completadas'], ['88 M US$', 'de préstamo sindicado modelado'], ['220K US$', 'de ahorro anual en contabilidad']],
         pts: ['Completé más de 4 operaciones de M&A en Europa y América; construí el modelo de valoración del grupo e integré cada adquisición en los estados consolidados NIIF.',
-              'Diseñé, construí y seguí el modelo financiero dinámico para prever el impacto de un préstamo sindicado de 80 M€.',
+              'Diseñé, construí y seguí el modelo financiero dinámico para prever el impacto de un préstamo sindicado de 88 M US$.',
               'Con el CFO, unifiqué el reporting de más de 10 países: plan de cuentas de grupo y aplicación homogénea de NIIF.',
               'Reduje los costes contables un 73% en Polonia y un 48% en Alemania con el modelo de servicios compartidos; lideré la implantación de Navision en EE. UU., México y Reino Unido.'] } },
     { when: 'May 2013 – May 2014', whenEs: 'May 2013 – may 2014',
@@ -124,9 +124,9 @@
         <figure><div class="frame"><canvas data-kind="${c.kind}" aria-hidden="true"></canvas></div><figcaption><span>${fig} 3.${n + i}</span><span>${smp}</span></figcaption></figure>
         <span class="tag ${cls}">${tag}</span><h3>${esc(d.t)}</h3><p>${esc(d.d)}</p><p class="ai">${esc(d.ai)}</p>
       </article>`; };
-    toolEl.innerHTML = TOOLS.map((c, i) => card(c, i, 1, l === 'es' ? 'Construido y en uso' : 'Built and in use', '')).join('');
-    conceptEl.innerHTML = CONCEPTS.map((c, i) => card(c, i, TOOLS.length + 1, l === 'es' ? 'Concepto' : 'Concept', 'concept')).join('');
-    [...toolEl.querySelectorAll('canvas'), ...conceptEl.querySelectorAll('canvas')].forEach((cv, i) => unmounts.push(PrizmaPreview.mount(cv, cv.dataset.kind, { lazy: true, offset: i * 1.4 })));
+    toolEl.innerHTML = TOOLS.map((c, i) => card(c, i, CONCEPTS.length + 1, l === 'es' ? 'Herramienta de IA' : 'AI tool', '')).join('');
+    conceptEl.innerHTML = CONCEPTS.map((c, i) => card(c, i, 1, 'Reporting', 'concept')).join('');
+    [...conceptEl.querySelectorAll('canvas'), ...toolEl.querySelectorAll('canvas')].forEach((cv, i) => unmounts.push(PrizmaPreview.mount(cv, cv.dataset.kind, { lazy: true, offset: i * 1.4 })));
     if (window.PrizmaReveal) PrizmaReveal([...careerEl.querySelectorAll('.seg'), ...toolEl.querySelectorAll('.tool'), ...conceptEl.querySelectorAll('.tool')]);
   }
   window.Portfolio = { render };

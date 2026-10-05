@@ -48,35 +48,35 @@
   .btn.line:hover{background:var(--ink);color:var(--paper)}
   .links .btn{padding:7px 14px;font-size:13px}
 
-  .cover{padding:64px 0 64px;border-bottom:1px solid var(--ink)}
+  .cover{padding:36px 0 40px;border-bottom:1px solid var(--ink)}
   .cover-top{display:flex;justify-content:space-between;gap:16px;font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--steel);padding-bottom:16px;border-bottom:1px solid var(--mist)}
-  .cover-head{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;margin-top:36px}
-  .cover h1{font-size:clamp(60px,11vw,168px);line-height:.92;letter-spacing:-.025em}
+  .cover-head{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;margin-top:24px}
+  .cover h1{font-size:clamp(34px,7.4vw,104px);line-height:.95;letter-spacing:-.025em;white-space:nowrap}
   .cover .role{font:500 13px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-top:18px}
-  .cover .sub{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.5vw,34px);color:var(--navy);margin-top:10px;max-width:30ch;line-height:1.25}
+  .cover .sub{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2vw,26px);color:var(--navy);margin-top:10px;max-width:30ch;line-height:1.25}
   .seal{width:150px;aspect-ratio:1;border-radius:50%;overflow:hidden;filter:grayscale(1) contrast(1.05);box-shadow:0 0 0 1px var(--hair),0 0 0 8px var(--paper),0 0 0 9px var(--mist);background:var(--mist-2)}
   .seal img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
-  .cover-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:44px;margin-top:48px;align-items:end}
+  .cover-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:44px;margin-top:28px;align-items:end}
   .chart{background:var(--sheet);border:1px solid var(--mist);padding:20px 20px 12px}
   .chart h4{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--steel);display:flex;justify-content:space-between;gap:12px}
   .chart svg{display:block;width:100%;height:auto;margin-top:10px;overflow:visible}
   .chart .src{font:400 11px var(--mono);color:var(--steel);margin-top:4px}
   .kf{border-top:2px solid var(--ink)}
-  .kf div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid var(--mist)}
+  .kf div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:9px 0;border-bottom:1px solid var(--mist)}
   .kf span{font-size:14.5px;color:var(--steel)}
   .kf b{font:500 32px var(--serif);color:var(--ink);white-space:nowrap}
   .kf b.hl{color:var(--signal)}
   .cover-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
 
-  section{padding:96px 0;border-bottom:1px solid var(--mist)}
-  .ch{display:grid;grid-template-columns:200px 1fr;gap:40px;margin-bottom:48px;align-items:start}
+  section{padding:56px 0;border-bottom:1px solid var(--mist)}
+  .ch{display:grid;grid-template-columns:200px 1fr;gap:32px;margin-bottom:28px;align-items:start}
   .ch .no{font:500 13px var(--mono);letter-spacing:.08em;color:var(--navy);text-transform:uppercase;border-top:2px solid var(--navy);padding-top:10px}
-  .ch h2{font-size:clamp(40px,5.2vw,72px);line-height:1.02}
+  .ch h2{font-size:clamp(30px,3.6vw,50px);line-height:1.05}
   .ch h2 em{color:var(--navy)}
-  .ch p{color:var(--steel);font-size:17.5px;margin-top:16px;max-width:62ch}
+  .ch p{color:var(--steel);font-size:16px;margin-top:10px;max-width:62ch}
 
   .letter{display:grid;grid-template-columns:200px 1fr;gap:40px}
-  .letter .body{columns:2 300px;column-gap:40px;font-family:var(--serif);font-size:19px;line-height:1.6}
+  .letter .body{columns:2 300px;column-gap:40px;font-family:var(--serif);font-size:17px;line-height:1.55}
   .letter .body p{margin-bottom:16px;break-inside:avoid-column}
   .letter .body p:first-child::first-letter{float:left;font-size:4.2em;line-height:.8;padding:6px 10px 0 0;color:var(--navy)}
   .sign{font-family:var(--serif);font-style:italic;font-size:26px;color:var(--navy);margin-top:6px}
@@ -89,57 +89,59 @@
   table.fig{width:100%;border-collapse:collapse;font-size:15.5px}
   table.fig th{font:500 11.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--steel);text-align:left;padding:10px 12px;border-bottom:2px solid var(--ink)}
   table.fig th.r,table.fig td.r{text-align:right}
-  table.fig td{padding:15px 12px;border-bottom:1px solid var(--mist);vertical-align:top}
+  table.fig td{padding:10px 12px;border-bottom:1px solid var(--mist);vertical-align:top}
   table.fig td.r{font:500 26px var(--serif);white-space:nowrap}
   table.fig td.r.hl{color:var(--signal)}
   table.fig td.n{font:400 12px var(--mono);color:var(--steel);white-space:nowrap}
   table.fig td small{display:block;color:var(--steel);font-size:13.5px;margin-top:2px}
 
-  .seg{display:grid;grid-template-columns:280px 1fr;gap:44px;padding:40px 0;border-top:1px solid var(--mist)}
+  .seg{display:grid;grid-template-columns:260px 1fr;gap:36px;padding:26px 0;border-top:1px solid var(--mist)}
   .seg:first-child{border-top:0;padding-top:0}
   .seg .when{font:500 12px var(--mono);letter-spacing:.06em;color:var(--steel)}
   .seg .label{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--navy);margin-top:6px}
-  .seg h3{font-size:clamp(30px,3vw,42px);line-height:1.05;margin:6px 0 4px}
+  .seg h3{font-size:clamp(24px,2.3vw,32px);line-height:1.05;margin:6px 0 4px}
   .seg .where{font-size:14px;color:var(--steel)}
   .seg .kpi{margin-top:20px;border-top:2px solid var(--ink)}
-  .seg .kpi div{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 0;border-bottom:1px solid var(--mist)}
+  .seg .kpi div{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:6px 0;border-bottom:1px solid var(--mist)}
   .seg .kpi b{font:500 28px var(--serif);color:var(--signal);white-space:nowrap}
   .seg .kpi span{font-size:13px;color:var(--steel);text-align:right}
-  .seg .ctx{font-family:var(--serif);font-size:20px;line-height:1.45;margin-bottom:16px}
-  .seg ul{list-style:none;display:grid;gap:10px;border-top:1px solid var(--ink);padding-top:14px}
-  .seg li{font-size:15.5px;color:var(--body);padding-left:20px;position:relative}
+  .seg .ctx{font-family:var(--serif);font-size:17.5px;line-height:1.45;margin-bottom:12px}
+  .seg ul{list-style:none;display:grid;gap:6px;border-top:1px solid var(--ink);padding-top:14px}
+  .seg li{font-size:14.5px;color:var(--body);padding-left:20px;position:relative}
   .seg li::before{content:"";position:absolute;left:0;top:11px;width:8px;height:2px;background:var(--navy)}
   .gap{font:400 13px var(--mono);color:var(--steel);padding:18px 0;border-top:1px dashed var(--hair)}
 
   .ai-points{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--mist);border:1px solid var(--mist);margin-bottom:40px}
-  .ai-points div{background:var(--sheet);padding:22px}
+  .ai-points div{background:var(--sheet);padding:16px}
   .ai-points b{display:block;font:500 34px var(--serif);color:var(--signal);line-height:1.1;margin-bottom:6px}
   .ai-points span{font-size:14.5px;color:var(--body)}
-  .sub-h{margin:56px 0 24px;border-top:1px solid var(--ink);padding-top:16px;display:grid;grid-template-columns:200px 1fr;gap:40px}
-  .sub-h h3{font:500 26px/1.15 var(--serif);margin:0}
+  .sub-h{margin:40px 0 20px;border-top:1px solid var(--ink);padding-top:16px;display:grid;grid-template-columns:200px 1fr;gap:40px}
+  .sub-h h3{font:500 30px/1.1 var(--serif);margin:0}
+  .sub-h h3 em{color:var(--navy)}
+  .sub-h p{margin-top:0}
   .sub-h p{margin:0;color:var(--steel);max-width:62ch}
   .tool .tag{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--navy)}
   .tool .tag.concept{color:var(--steel)}
-  .tools{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
   .tool figure{margin:0}
   .tool .frame{background:var(--sheet);border:1px solid var(--mist);padding:10px}
   .tool canvas{display:block;width:100%;aspect-ratio:8/5}
   .tool figcaption{display:flex;justify-content:space-between;gap:12px;font:400 11.5px var(--mono);color:var(--steel);margin-top:8px}
-  .tool h3{font-size:28px;margin:14px 0 6px}
-  .tool p{font-size:15px;color:var(--body)}
+  .tool h3{font-size:21px;margin:10px 0 4px}
+  .tool p{font-size:14px;color:var(--body)}
   .tool p.ai{margin-top:8px;color:var(--ink)}
   .tool p.ai::before{content:"";display:inline-block;width:8px;height:8px;background:var(--signal);margin-right:8px;vertical-align:1px}
 
   .notes{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-  .note h3{font-size:28px;margin-bottom:12px;display:flex;gap:12px;align-items:baseline}
+  .note h3{font-size:24px;margin-bottom:12px;display:flex;gap:12px;align-items:baseline}
   .note h3 span:first-child{font:500 13px var(--mono);color:var(--navy)}
   .note ul{list-style:none;border-top:2px solid var(--ink)}
-  .note li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--mist);font-size:15px}
+  .note li{display:flex;justify-content:space-between;gap:16px;padding:7px 0;border-bottom:1px solid var(--mist);font-size:14.5px}
   .note li span{font:400 12px var(--mono);color:var(--steel);text-align:right}
   .note .grid2{display:grid;grid-template-columns:1fr 1fr;column-gap:24px}
 
   .ir{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:end}
-  .ir h2{font-size:clamp(44px,6vw,84px);line-height:1.02}
+  .ir h2{font-size:clamp(30px,4vw,52px);line-height:1.02}
   .ir h2 em{color:var(--navy)}
   .ir p{color:var(--steel);font-size:18px;margin-top:18px;max-width:52ch}
   .ir .card{background:var(--sheet);border:1px solid var(--mist);border-top:3px solid var(--navy);padding:24px}
@@ -211,7 +213,7 @@
         <div>
           <div class="kf">
             <div><span data-i18n="k1">Years in finance leadership</span><b>13</b></div>
-            <div><span data-i18n="k2">Strategic investment, business plan and due diligence, 2026</span><b class="hl">¥200M</b></div>
+            <div><span data-i18n="k2">Strategic investment, business plan and due diligence, 2026</span><b class="hl">US$1.3M</b></div>
             <div><span data-i18n="k3">Assets under management today</span><b>US$200M+</b></div>
             <div><span data-i18n="k4">EBT growth in a turnaround</span><b>+4,500%</b></div>
             <div><span data-i18n="k5">Group revenue, Grupo Sesé (up to)</span><b>US$1B</b></div>
@@ -237,8 +239,8 @@
         <div>
           <div class="body">
             <p data-i18n="l1">For thirteen years I have run finance where it is hardest: multi-entity groups, several jurisdictions, and moments when the numbers decide whether a company is funded, sold or saved. The last eight of those years have been in Asia, across Japan, Hong Kong and Korea.</p>
-            <p data-i18n="l2">Today I am CFO of a Japanese hospitality investment group with more than US$200M in assets across 13 properties. In 2026 I led two investor due diligences: a ¥200M strategic corporate investment at a ¥2.7B valuation, built on a business plan I wrote myself, and an ongoing liquidity event that remains confidential.</p>
-            <p data-i18n="l3">Before that I turned two businesses around, grew EBT by 4,500% at a start-up and supported its owner's exit, and in Europe I completed four acquisitions, modelled an €80M syndicated loan and unified reporting for ten countries.</p>
+            <p data-i18n="l2">Today I am CFO of a Japanese hospitality investment group with more than US$200M in assets across 13 properties. In 2026 I led two investor due diligences: a US$1.3M strategic corporate investment at a US$18M valuation, built on a business plan I wrote myself, and an ongoing liquidity event that remains confidential.</p>
+            <p data-i18n="l3">Before that I turned two businesses around, grew EBT by 4,500% at a start-up and supported its owner's exit, and in Europe I completed four acquisitions, modelled an US$88M syndicated loan and unified reporting for ten countries.</p>
             <p data-i18n="l4">What sets my finance function apart is how it works. I build our tools with AI myself, I made AI training mandatory for the team, and a management report now takes under thirty seconds. I am a Certified Fraud Examiner, so every one of those tools is built with controls first.</p>
           </div>
           <p class="sign">Javier Munoz<small>CFE · Chief Financial Officer</small></p>
@@ -254,14 +256,14 @@
         <table class="fig">
           <thead><tr><th data-i18n="t_m">Measure</th><th class="r" data-i18n="t_v">Figure</th><th data-i18n="t_n">Note</th></tr></thead>
           <tbody>
-            <tr><td><span data-i18n="m1">Strategic corporate investment: business plan and due diligence</span><small data-i18n="m1s">At a ¥2.7B valuation, backed by a self-built business plan · 2026</small></td><td class="r hl">¥200M</td><td class="n">4.1</td></tr>
+            <tr><td><span data-i18n="m1">Strategic corporate investment: business plan and due diligence</span><small data-i18n="m1s">At a US$18M valuation, backed by a self-built business plan · 2026</small></td><td class="r hl">US$1.3M</td><td class="n">4.1</td></tr>
             <tr><td><span data-i18n="m2">Assets under management</span><small data-i18n="m2s">13 hotel properties, three brands · current role</small></td><td class="r">US$200M+</td><td class="n">4.1</td></tr>
             <tr><td><span data-i18n="m3">Return on investment, year on year</span><small data-i18n="m3s">Asset-performance management and capital reallocation</small></td><td class="r">+7%</td><td class="n">4.1</td></tr>
             <tr><td><span data-i18n="m4">EBT growth after two years of decline</span><small data-i18n="m4s">Turnaround and owner's exit · GoGo World</small></td><td class="r hl">+4,500%</td><td class="n">4.2</td></tr>
             <tr><td><span data-i18n="m5">Annual tax savings</span><small data-i18n="m5s">Compliant transfer-pricing structures across Asia</small></td><td class="r">US$400K+</td><td class="n">4.2</td></tr>
             <tr><td><span data-i18n="m6">Cash-to-cash cycle</span><small data-i18n="m6s">Centralised cash management · financial costs −23%</small></td><td class="r" data-i18n="m6v">−28 days</td><td class="n">4.2</td></tr>
             <tr><td><span data-i18n="m10">Group revenue</span><small data-i18n="m10s">Up to US$1B · Deputy CFO at HQ, 10+ countries · Grupo Sesé</small></td><td class="r">US$1B</td><td class="n">4.4</td></tr>
-            <tr><td><span data-i18n="m7">Syndicated financing modelled</span><small data-i18n="m7s">Dynamic model forecasting the loan's impact · Grupo Sesé</small></td><td class="r">€80M</td><td class="n">4.4</td></tr>
+            <tr><td><span data-i18n="m7">Syndicated financing modelled</span><small data-i18n="m7s">Dynamic model forecasting the loan's impact · Grupo Sesé</small></td><td class="r">US$88M</td><td class="n">4.4</td></tr>
             <tr><td><span data-i18n="m8">Acquisitions completed</span><small data-i18n="m8s">Europe and the Americas, integrated into IFRS consolidation</small></td><td class="r">4+</td><td class="n">4.4</td></tr>
             <tr><td><span data-i18n="m9">Time to produce a management report</span><small data-i18n="m9s">Automated with AI-built tools · current role</small></td><td class="r" data-i18n="m9v">&lt; 30 s</td><td class="n">3</td></tr>
           </tbody>
@@ -272,15 +274,15 @@
 
   <section id="ai">
     <div class="wrap">
-      <div class="ch"><div class="no" data-i18n="c4">03 · Deliverables</div><div><h2 data-i18n-html="c4_t">An AI-first <em>finance function.</em></h2><p data-i18n="c4_p">I don't buy a tool for every problem. I build the ones my team needs with Claude, train the team to use them with judgment, and keep controls in every one. The figures below are live animations shown with sample data.</p></div></div>
+      <div class="ch"><div class="no" data-i18n="c4">03 · Deliverables</div><div><h2 data-i18n-html="rp_t">Reporting <em>tools.</em></h2><p data-i18n="rp_p">Board, management, consolidation and valuation reporting for multi-entity groups. Shown with sample data.</p></div></div>
+      <div class="tools" id="concept-list"></div>
+      <div class="sub-h reveal"><h3 data-i18n-html="c4_t">An AI-first <em>finance function.</em></h3><p data-i18n="c4_p">I don't buy a tool for every problem. I build the ones my team needs with Claude, train the team to use them with judgment, and keep controls in every one. The figures below are live animations shown with sample data.</p></div>
       <div class="ai-points reveal">
         <div><b data-i18n="ap1">&lt; 30 s</b><span data-i18n="ap1d">to produce a management report, with automation built in-house with AI</span></div>
         <div><b data-i18n="ap2">Mandatory</b><span data-i18n="ap2d">Anthropic AI training for the accounting team; AI fluency is a hiring criterion</span></div>
         <div><b>1</b><span data-i18n="ap3d">reconciled P&amp;L and KPI dataset for 13 properties, feeding the group's AI analytics platform</span></div>
       </div>
       <div class="tools" id="tool-list"></div>
-      <div class="sub-h reveal"><h3 data-i18n="cn_t">Reports I would bring next</h3><p data-i18n="cn_p">Concepts, not yet built: the reporting I would set up in the first 90 days of a new role, using the same approach. Shown with sample data.</p></div>
-      <div class="tools" id="concept-list"></div>
     </div>
   </section>
 
@@ -378,11 +380,11 @@ const T = { es: {
   c1:"01 · Carta", c1_t:"Del CFO, <em>al lector.</em>",
   as1:"Residencia", as1v:"Kaohsiung, Taiwán", as3:"Idiomas", as3v:"Español, inglés, alemán, mandarín, italiano", as4:"Normativas",
   l1:"Durante trece años he dirigido finanzas donde más cuesta: grupos multisociedad, varias jurisdicciones y momentos en los que los números deciden si una empresa se financia, se vende o se salva. Los últimos ocho años, en Asia: Japón, Hong Kong y Corea.",
-  l2:"Hoy soy CFO de un grupo japonés de inversión hotelera con más de 200 M US$ en activos y 13 hoteles. En 2026 he liderado dos due diligences de inversores: una inversión corporativa estratégica de ¥200M a una valoración de ¥2.700M, basada en un plan de negocio que construí yo, y un evento de liquidez en curso que sigue siendo confidencial.",
-  l3:"Antes reestructuré dos negocios, multipliqué el EBT de una start-up un 4.500% y acompañé la salida de su propietario; y en Europa completé cuatro adquisiciones, modelé un préstamo sindicado de 80 M€ y unifiqué el reporting de diez países.",
+  l2:"Hoy soy CFO de un grupo japonés de inversión hotelera con más de 200 M US$ en activos y 13 hoteles. En 2026 he liderado dos due diligences de inversores: una inversión corporativa estratégica de 1,3 M US$ a una valoración de 18 M US$, basada en un plan de negocio que construí yo, y un evento de liquidez en curso que sigue siendo confidencial.",
+  l3:"Antes reestructuré dos negocios, multipliqué el EBT de una start-up un 4.500% y acompañé la salida de su propietario; y en Europa completé cuatro adquisiciones, modelé un préstamo sindicado de 88 M US$ y unifiqué el reporting de diez países.",
   l4:"Lo que distingue a mi función financiera es cómo trabaja. Construyo yo mismo nuestras herramientas con IA, hice obligatoria la formación en IA para el equipo y un informe de gestión se genera ahora en menos de treinta segundos. Soy Certified Fraud Examiner, así que cada herramienta nace con el control primero.",
   c2:"02 · Cifras clave", c2_t:"Resultados, <em>en cifras.</em>", t_m:"Indicador", t_v:"Cifra", t_n:"Nota",
-  m1:"Inversión corporativa estratégica: plan de negocio y due diligence", m1s:"A una valoración de ¥2.700M, con un plan de negocio propio · 2026",
+  m1:"Inversión corporativa estratégica: plan de negocio y due diligence", m1s:"A una valoración de 18 M US$, con un plan de negocio propio · 2026",
   m2:"Activos gestionados", m2s:"13 hoteles, tres marcas · puesto actual",
   m3:"Retorno de la inversión, interanual", m3s:"Gestión del rendimiento de activos y reasignación de capital",
   m4:"Crecimiento del EBT tras dos años de caída", m4s:"Reestructuración y salida del propietario · GoGo World",
@@ -393,7 +395,7 @@ const T = { es: {
   m9:"Tiempo para generar un informe de gestión", m9s:"Automatizado con herramientas hechas con IA · puesto actual",
   c3:"04 · Trayectoria", c3_t:"Cinco puestos, <em>tres continentes.</em>", c3_p:"Cada puesto se presenta como un segmento: el contexto que me encontré y lo que cambió mientras estuve.",
   c4:"03 · Entregables", c4_t:"Una función financiera <em>basada en IA.</em>",
-  cn_t:"Los informes que llevaría después", cn_p:"Conceptos, aún no construidos: el reporting que montaría en los primeros 90 días de un puesto nuevo, con el mismo método. Con datos de ejemplo.",
+  rp_t:"Herramientas de <em>reporting.</em>", rp_p:"Reporting de consejo, de gestión, de consolidación y de valoración para grupos multisociedad. Con datos de ejemplo.",
   c4_p:"No compro una herramienta para cada problema. Construyo con Claude las que necesita mi equipo, le formo para usarlas con criterio y mantengo el control en todas. Las figuras son animaciones en vivo con datos de ejemplo.",
   ap1d:"para generar un informe de gestión, con automatización construida internamente con IA",
   ap2:"Obligatoria", ap2d:"formación en IA de Anthropic para el equipo contable; la soltura con IA es criterio de contratación",
@@ -460,8 +462,8 @@ let io = null;
 if ('IntersectionObserver' in window && !reduce) io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('shown'); io.unobserve(e.target); } }), {threshold:.1});
 window.PrizmaReveal = els => els.forEach(el => { el.classList.add('reveal'); io ? io.observe(el) : el.classList.add('shown'); });
 </script>
-<script src="previews.js?v=4"></script>
-<script src="portfolio.js?v=6"></script>
+<script src="previews.js?v=5"></script>
+<script src="portfolio.js?v=7"></script>
 <script>
 let saved = null; try { saved = localStorage.getItem('jm-lang'); } catch(e){}
 setLang(saved === 'es' ? 'es' : 'en');

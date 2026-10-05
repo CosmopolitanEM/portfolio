@@ -40,7 +40,7 @@
   // 1 ── Management reporting: KPI tiles + actual vs budget bars + variances
   function management(g, t) {
     chrome(g, L('Management Pack — September', 'Pack de gestión — Septiembre'), L('AUTO-GENERATED', 'GENERADO AUTO'));
-    const kpis = [[L('Revenue', 'Ingresos'), 4.82, 'M€', 6.1], [L('Gross margin', 'Margen bruto'), 38.4, '%', 1.2], ['EBITDA', 0.91, 'M€', 4.3], [L('Cash', 'Caja'), 2.37, 'M€', -2.1]];
+    const kpis = [[L('Revenue', 'Ingresos'), 4.82, 'M$', 6.1], [L('Gross margin', 'Margen bruto'), 38.4, '%', 1.2], ['EBITDA', 0.91, 'M$', 4.3], [L('Cash', 'Caja'), 2.37, 'M$', -2.1]];
     kpis.forEach(([k, v, u, d], i) => {
       const p = eo(prog(t, .2 + i * .12, 1.4 + i * .12)), x = 20 + i * 192;
       g.globalAlpha = clamp(p * 2); card(g, x, 56 + (1 - p) * 20, 180, 86);
@@ -50,7 +50,7 @@
       g.globalAlpha = 1;
     });
     card(g, 20, 158, 470, 322);
-    txt(g, L('Actual vs budget · k€', 'Real vs presupuesto · k€'), 38, 186, 13, C.text2, 600);
+    txt(g, L('Actual vs budget · k$', 'Real vs presupuesto · k$'), 38, 186, 13, C.text2, 600);
     const act = [310, 342, 368, 355, 401, 428, 415, 446, 482], bud = [320, 330, 350, 370, 385, 400, 420, 435, 450];
     const mo = L('JFMAMJJAS', 'EFMAMJJAS');
     for (let i = 0; i < 9; i++) {
@@ -147,7 +147,7 @@
     rr(g, -110, -86, 220, 172, 16); g.fillStyle = '#E8EFFD'; g.fill(); g.strokeStyle = C.orange; g.lineWidth = 2; g.stroke();
     txt(g, L('GROUP', 'GRUPO'), 0, -50, 12, C.amber, 600, MONO, 'center');
     const tot = 5.97 - 0.38 * prog(t, 3.2, 4.4);
-    txt(g, fmt(tot, 2) + 'M€', 0, -6, 34, C.text, 800, DISP, 'center');
+    txt(g, fmt(tot, 2) + 'M$', 0, -6, 34, C.text, 800, DISP, 'center');
     txt(g, L('Revenue, consolidated', 'Ingresos consolidados'), 0, 20, 12, C.muted, 500, UI, 'center');
     if (t > 3.2) { const p = prog(t, 3.2, 4.4); rr(g, -86, 38, 172, 30, 15); g.fillStyle = 'rgba(61,127,166,.15)'; g.fill();
       txt(g, (p < 1 ? L('Eliminating… ', 'Eliminando… ') : '✓ ') + L('interco −0.38M', 'interco −0,38M'), 0, 58, 12, C.teal, 600, MONO, 'center'); }
@@ -226,12 +226,12 @@
     const occ = 72 + tw * 6, adr = 118 + tw * 7, rooms = 420;
     const rev = rooms * 365 * occ / 100 * adr / 1e6;
     const nodes = [
-      [400, 110, L('Revenue', 'Ingresos'), fmt(rev, 2) + 'M€', C.orange, 0],
+      [400, 110, L('Revenue', 'Ingresos'), fmt(rev, 2) + 'M$', C.orange, 0],
       [210, 250, L('Room nights', 'Noches vendidas'), fmt(rooms * 365 * occ / 100 / 1000, 1) + 'k', C.amber, .3],
       [590, 250, 'ADR', fmt(adr, 0) + ' €', C.amber, .4],
       [105, 390, L('Rooms', 'Habitaciones'), fmt(rooms), C.text2, .6],
       [295, 390, L('Occupancy', 'Ocupación'), fmt(occ, 1) + '%', C.teal, .7],
-      [505, 390, L('Rack rate', 'Tarifa base'), '142 €', C.text2, .8],
+      [505, 390, L('Rack rate', 'Tarifa base'), '$142', C.text2, .8],
       [695, 390, L('Discounts', 'Descuentos'), '-' + fmt(24 - tw * 7, 0) + ' €', C.text2, .9]];
     const edges = [[0, 1], [0, 2], [1, 3], [1, 4], [2, 5], [2, 6]];
     edges.forEach(([a, b]) => { const p = prog(t, .4 + nodes[b][5], 1 + nodes[b][5]); const A = nodes[a], B = nodes[b];
@@ -268,10 +268,10 @@
     const ep = eb(prog(t, 2.2, 3)); g.save(); g.translate(660, 190); g.scale(ep, ep);
     rr(g, -110, -100, 220, 200, 14); g.fillStyle = '#E8EFFD'; g.fill(); g.strokeStyle = C.orange; g.lineWidth = 2; g.stroke();
     txt(g, 'ENTERPRISE VALUE', 0, -64, 11, C.amber, 600, MONO, 'center');
-    txt(g, fmt(42.3 * clamp(ep), 1) + 'M€', 0, -22, 34, C.text, 800, DISP, 'center');
+    txt(g, fmt(42.3 * clamp(ep), 1) + 'M$', 0, -22, 34, C.text, 800, DISP, 'center');
     [['WACC', '9.5%'], ['g', '2.0%'], ['EV/EBITDA', '9.8x']].forEach(([k, v], i) => { txt(g, k, -86, 18 + i * 24, 12, C.muted, 500, MONO); txt(g, v, 86, 18 + i * 24, 12, C.text, 700, MONO, 'right'); });
     g.restore();
-    txt(g, L('Sensitivity · EV (M€) — WACC × g', 'Sensibilidad · EV (M€) — WACC × g'), 22, 330, 12, C.text2, 600);
+    txt(g, L('Sensitivity · EV (M$) — WACC × g', 'Sensibilidad · EV (M$) — WACC × g'), 22, 330, 12, C.text2, 600);
     const w = [8.5, 9, 9.5, 10, 10.5], gg = [1.5, 2, 2.5];
     gg.forEach((gv, r) => w.forEach((wv, c) => {
       const p = prog(t, 3.2 + (r * 5 + c) * .06, 3.6 + (r * 5 + c) * .06); if (p <= 0) return;
@@ -292,7 +292,7 @@
       [L('Google Workspace', 'Google Workspace'), '86,40', '629 Software', '629 Software'], [L('Laundry Services SL', 'Lavandería SL'), '1.940,00', '623 Services', '623 Servicios'],
       [L('Booking.com — Commission', 'Booking.com — Comisión'), '6.702,15', '623 Commissions', '623 Comisiones'], [L('Makro — F&B', 'Makro — A&B'), '2.110,72', '600 F&B stock', '600 Existencias A&B']];
     card(g, 20, 56, 760, 424);
-    const cols = [L('Supplier', 'Proveedor'), L('Amount €', 'Importe €'), L('AI account', 'Cuenta IA'), L('Bank', 'Banco')];
+    const cols = [L('Supplier', 'Proveedor'), L('Amount $', 'Importe $'), L('AI account', 'Cuenta IA'), L('Bank', 'Banco')];
     [40, 330, 470, 690].forEach((x, i) => txt(g, cols[i].toUpperCase(), x, 86, 11, C.muted, 500, MONO));
     let done = 0;
     inv.forEach(([s, a, en, es], i) => {
@@ -392,7 +392,7 @@
     for (let i = 0; i < 7; i++) { g.fillStyle = 'rgba(11,31,58,.18)'; g.fillRect(56, 100 + i * 22, i % 3 ? 150 : 100, 6); }
     const scan = prog(t, .4, 1.6); if (scan > 0 && scan < 1) { g.fillStyle = 'rgba(47,111,237,.6)'; g.fillRect(40, 76 + 200 * scan, 210, 3); }
     txt(g, L('invoice_0917.pdf', 'factura_0917.pdf'), 40, 300, 12, C.muted, 500, MONO);
-    const fields = [[L('Supplier', 'Proveedor'), 'Linen Services Ltd'], [L('Amount', 'Importe'), '€ 18,400'], [L('Category', 'Categoría'), L('Operations · linen', 'Operaciones · lencería')], [L('Cost centre', 'Centro de coste'), 'Hotel 04']];
+    const fields = [[L('Supplier', 'Proveedor'), 'Linen Services Ltd'], [L('Amount', 'Importe'), '$ 18,400'], [L('Category', 'Categoría'), L('Operations · linen', 'Operaciones · lencería')], [L('Cost centre', 'Centro de coste'), 'Hotel 04']];
     card(g, 290, 56, 490, 170);
     fields.forEach(([k, v], i) => { const p = prog(t, 1.4 + i * .25, 1.8 + i * .25); const y = 90 + i * 34;
       txt(g, k.toUpperCase(), 310, y, 10.5, C.muted, 500, MONO); if (p > 0) { g.globalAlpha = p; txt(g, v, 470, y, 13.5, C.text, 600); g.globalAlpha = 1; } });
@@ -400,7 +400,7 @@
     // approval path
     const steps = [[L('Requester', 'Solicitante'), 'JM'], [L('Dept head', 'Jefe de área'), 'RS'], [L('Finance', 'Finanzas'), 'EK'], ['CFO', 'MT']];
     card(g, 290, 240, 490, 116);
-    txt(g, L('ROUTE · TIER 3 (€10k–€50k)', 'RUTA · NIVEL 3 (10k–50k €)'), 310, 264, 10.5, C.amber, 600, MONO);
+    txt(g, L('ROUTE · TIER 3 ($10k–$50k)', 'RUTA · NIVEL 3 ($10k–$50k)'), 310, 264, 10.5, C.amber, 600, MONO);
     steps.forEach(([r, a], i) => { const x = 330 + i * 118, done = t > 3.2 + i * .7, act = !done && t > 2.8 + i * .7;
       if (i) { g.strokeStyle = done ? C.teal : C.line2; g.lineWidth = 2; g.beginPath(); g.moveTo(x - 94, 300); g.lineTo(x - 24, 300); g.stroke(); }
       g.fillStyle = done ? C.teal : act ? C.orange : 'rgba(14,23,38,.1)'; g.beginPath(); g.arc(x, 300, 20, 0, 6.3); g.fill();
