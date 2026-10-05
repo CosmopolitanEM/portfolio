@@ -109,14 +109,10 @@
       if (c.gap) return `<p class="gap">${esc(c.gap[l])}</p>`;
       const d = c[l];
       return `<article class="seg">
-        <div>
-          <span class="when">${esc(l === 'es' ? c.whenEs : c.when)}</span>
-          <div class="label">${esc(d.label)}</div>
-          <h3>${esc(d.t)}</h3>
-          <div class="where">${esc(d.where)}</div>
-          <div class="kpi">${d.kpi.map(([v, s]) => `<div><b>${esc(v)}</b><span>${esc(s)}</span></div>`).join('')}</div>
-        </div>
-        <div><p class="ctx">${esc(d.ctx)}</p><ul>${d.pts.map(p => `<li>${esc(p)}</li>`).join('')}</ul></div>
+        <div class="meta"><span class="label">${esc(d.label)}</span><span class="when">${esc(l === 'es' ? c.whenEs : c.when)}</span></div>
+        <div class="head"><h3>${esc(d.t)}</h3><span class="where">${esc(d.where)}</span></div>
+        <div class="kpi">${d.kpi.map(([v, s]) => `<div><b>${esc(v)}</b><span>${esc(s)}</span></div>`).join('')}</div>
+        <p class="ctx">${esc(d.ctx)}</p><ul>${d.pts.map(p => `<li>${esc(p)}</li>`).join('')}</ul>
       </article>`; }).join('');
     const fig = l === 'es' ? 'Figura' : 'Figure', smp = l === 'es' ? 'Datos de ejemplo' : 'Sample data';
     const card = (c, i, n, tag, cls) => { const d = c[l];
