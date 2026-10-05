@@ -17,7 +17,7 @@
     --serif:"Aptos Display",Aptos,"Segoe UI","Helvetica Neue",Arial,sans-serif;
     --sans:Aptos,"Segoe UI","Helvetica Neue",Arial,sans-serif;
     --mono:Aptos,"Segoe UI","Helvetica Neue",Arial,sans-serif;
-    --max:1180px;
+    --max:1180px; --gap:16px; --cols:repeat(4,minmax(0,1fr));
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;background:var(--paper)}
@@ -60,28 +60,30 @@
   .cover .sub{font-family:var(--serif);font-style:italic;font-weight:400;font-size:12pt;color:var(--navy);margin-top:6px;line-height:1.25}
   .seal{width:150px;aspect-ratio:1;border-radius:50%;overflow:hidden;filter:grayscale(1) contrast(1.05);box-shadow:0 0 0 1px var(--hair),0 0 0 8px var(--paper),0 0 0 9px var(--mist);background:var(--mist-2)}
   .seal img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
-  .cover-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:44px;margin-top:28px;align-items:stretch}
+  .cover-grid{display:grid;grid-template-columns:var(--cols);gap:var(--gap);margin-top:28px;align-items:stretch}
+  .cover-grid>.chart{grid-column:1/3}.cover-grid>div:last-child{grid-column:3/5}
   .chart{background:var(--sheet);border:1px solid var(--mist);border-top:2px solid var(--ink);padding:16px 20px 12px;display:flex;flex-direction:column;justify-content:space-between}
   .chart h4{font:600 8.5pt var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--steel);display:flex;justify-content:space-between;gap:12px}
   .chart svg{display:block;width:100%;height:auto;margin-top:10px;overflow:visible}
   .chart .src{font:400 8.5pt var(--mono);color:var(--steel);margin-top:4px}
-  .kf{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .kf{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
   .kf div{background:var(--sheet);border:1px solid var(--mist);border-top:2px solid var(--ink);padding:12px 14px;display:flex;flex-direction:column;gap:2px;min-width:0}
   .kf b{font:600 18pt/1.1 var(--serif);color:var(--ink);white-space:nowrap}
   .kf b.hl{color:var(--signal)}
   .kf span{font-size:9.5pt;line-height:1.35;color:var(--steel);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .cover-cta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+  .cover-cta{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);margin-top:var(--gap)}
   .cover-cta .btn{justify-content:center;padding-inline:12px}
 
   section{padding:56px 0;border-bottom:1px solid var(--mist)}
-  .ch{display:grid;grid-template-columns:200px 1fr;gap:32px;margin-bottom:28px;align-items:baseline}
+  .ch{display:grid;grid-template-columns:var(--cols);gap:var(--gap);margin-bottom:28px;align-items:baseline}
+  .ch>:last-child{grid-column:2/-1}
   .ch .no{font:600 9pt var(--mono);letter-spacing:.05em;color:var(--navy);text-transform:uppercase;border-top:2px solid var(--navy);padding-top:10px}
   .ch h2{font-size:14pt;line-height:1.25}
   .ch h2 em{color:var(--navy)}
   .ch p{color:var(--steel);font-size:11pt;margin-top:4px}
 
 
-  .figs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+  .figs{display:grid;grid-template-columns:var(--cols);gap:var(--gap)}
   .fc{position:relative;display:grid;grid-row:span 3;grid-template-rows:subgrid;row-gap:4px;background:var(--sheet);border:1px solid var(--mist);border-top:2px solid var(--ink);padding:14px 16px}
   .fc b{font:600 18pt/1.1 var(--serif);color:var(--ink);white-space:nowrap}
   .fc b.hl{color:var(--signal)}
@@ -100,35 +102,34 @@
 
   .seg{padding:22px 0;border-top:1px solid var(--mist)}
   .seg:first-child{border-top:0;padding-top:0}
-  .seg .meta{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .seg .when{font:500 9pt var(--mono);letter-spacing:.06em;color:var(--steel)}
   .seg .label{font:600 8.5pt var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--navy)}
-  .seg .head{display:flex;justify-content:space-between;align-items:baseline;gap:4px 20px;flex-wrap:wrap;border-bottom:1px solid var(--ink);padding:2px 0 6px}
-  .seg h3{font-size:14pt;line-height:1.25}
-  .seg .where{font-size:10pt;color:var(--steel)}
-  .seg .kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin:12px 0}
-  .seg .kpi div{background:var(--sheet);border:1px solid var(--mist);border-top:2px solid var(--ink);padding:8px 14px;display:flex;align-items:baseline;gap:12px}
-  .seg .kpi b{font:600 16pt var(--serif);color:var(--signal);white-space:nowrap}
-  .seg .kpi span{font-size:9.5pt;color:var(--steel);line-height:1.35}
-  .seg .ctx{font-size:11pt;line-height:1.45;margin-bottom:10px}
-  .seg ul{list-style:none;border-top:1px solid var(--mist)}
-  .seg li{display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:baseline;padding:7px 0;border-bottom:1px solid var(--mist);font-size:10.5pt;line-height:1.5;color:var(--body)}
+  .seg .head{border-bottom:1px solid var(--ink);padding-bottom:6px}
+  .seg h3{font-size:14pt;line-height:1.25;margin-top:2px}
+  .seg .row{display:grid;grid-template-columns:var(--cols);gap:var(--gap);margin:var(--gap) 0}
+  .seg .row .k{background:var(--sheet);border:1px solid var(--mist);border-top:2px solid var(--ink);padding:10px 14px;display:flex;flex-direction:column;gap:2px}
+  .seg .row .k b{font:600 16pt/1.1 var(--serif);color:var(--signal);white-space:nowrap}
+  .seg .row .k span{font-size:9.5pt;color:var(--steel);line-height:1.35}
+  .seg .row .m{grid-column:4;border-top:2px solid var(--ink);padding:10px 0 0;display:flex;flex-direction:column;gap:2px}
+  .seg .where{font-size:9.5pt;color:var(--steel);line-height:1.4}
+  .seg .ctx{font-size:11pt;line-height:1.5;margin-bottom:10px;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  .seg li{display:grid;grid-template-columns:var(--cols);gap:var(--gap);align-items:baseline;padding:7px 0;border-bottom:1px solid var(--mist);font-size:10.5pt;line-height:1.5;color:var(--body)}
   .seg li b{font:600 9pt var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--navy)}
-  .seg li span{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  .seg li span{grid-column:2/-1;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  .seg ul{list-style:none;border-top:1px solid var(--mist)}
   .gap{font:400 10pt var(--mono);color:var(--steel);padding:18px 0;border-top:1px dashed var(--hair)}
 
-  .ai-points{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:40px}
+  .ai-points{display:grid;grid-template-columns:var(--cols);gap:var(--gap);margin-bottom:40px}
   .ai-points div{background:var(--sheet);border:1px solid var(--mist);border-top:2px solid var(--ink);padding:14px 16px}
   .ai-points b{display:block;font:600 18pt/1.1 var(--serif);color:var(--signal);margin-bottom:4px}
   .ai-points span{font-size:10pt;line-height:1.4;color:var(--steel)}
-  .sub-h{margin:40px 0 20px;border-top:1px solid var(--ink);padding-top:16px;display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:baseline}
+  .sub-h{margin:40px 0 20px;border-top:1px solid var(--ink);padding-top:16px;display:grid;grid-template-columns:var(--cols);gap:var(--gap);align-items:baseline}
+  .sub-h p{grid-column:2/-1;margin:0;color:var(--steel)}
   .sub-h h3{font:600 14pt/1.25 var(--serif);margin:0}
   .sub-h h3 em{color:var(--navy)}
-  .sub-h p{margin-top:0}
-  .sub-h p{margin:0;color:var(--steel);max-width:62ch}
   .tool .tag{font:600 8.5pt var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--navy)}
   .tool .tag.concept{color:var(--steel)}
-  .tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));column-gap:24px;row-gap:0}
+  .tools{display:grid;grid-template-columns:var(--cols);column-gap:var(--gap);row-gap:0}
   .tool{display:grid;grid-row:span 5;grid-template-rows:subgrid;row-gap:0;align-content:start;margin-bottom:32px}
   .tool figure{margin:0}
   .tool .frame{background:var(--sheet);border:1px solid var(--mist);padding:10px}
@@ -139,20 +140,21 @@
   .tool p.ai{margin-top:10px;padding-top:10px;border-top:1px solid var(--mist);color:var(--ink)}
   .tool p.ai::before{content:"";display:inline-block;width:8px;height:8px;background:var(--signal);margin-right:8px;vertical-align:1px}
 
-  .gov{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+  .gov{display:grid;grid-template-columns:var(--cols);gap:var(--gap)}
   .gc{display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:6px;background:var(--sheet);border:1px solid var(--mist);border-top:2px solid var(--ink);padding:14px 16px}
   .gc b{font:600 11pt/1.3 var(--serif);color:var(--navy)}
   .gc span{font-size:10pt;line-height:1.45;color:var(--body)}
-  .notes{display:grid;grid-template-columns:repeat(3,1fr);gap:36px 40px}
+  .notes{display:grid;grid-template-columns:var(--cols);gap:36px var(--gap)}
   .note.wide{grid-column:1/-1}
   .note h3{font-size:13pt;margin-bottom:10px;display:flex;gap:10px;align-items:baseline}
   .note h3 span:first-child{font:600 10pt var(--mono);color:var(--navy)}
   .note ul{list-style:none;border-top:2px solid var(--ink)}
   .note li{display:flex;flex-direction:column;gap:1px;padding:9px 0;border-bottom:1px solid var(--mist);font-size:10.5pt}
   .note li span{font:400 9pt var(--mono);color:var(--steel)}
-  .note .grid4{display:grid;grid-template-columns:repeat(4,1fr);column-gap:24px}
-  .close{display:grid;grid-template-columns:1fr 360px;gap:48px;align-items:start}
-  .close .body p{margin-bottom:14px;max-width:660px}
+  .note .grid4{display:grid;grid-template-columns:var(--cols);column-gap:var(--gap)}
+  .close{display:grid;grid-template-columns:var(--cols);gap:var(--gap);align-items:start}
+  .close .body{grid-column:1/4;padding-right:24px}
+  .close .body p{margin-bottom:14px;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
   .close .body p.lead{font:500 13pt/1.5 var(--serif);color:var(--ink)}
   .sign{font:600 13pt var(--serif);color:var(--navy);margin-top:18px}
   .sign small{display:block;font:400 9pt var(--mono);color:var(--steel);margin-top:2px}
@@ -172,31 +174,31 @@
   .js .reveal.shown{translate:0 0}
 
   @media (max-width:1000px){
-    .cover-grid,.close,.notes{grid-template-columns:1fr}
-    .gov{grid-template-columns:1fr 1fr}
-    .note .grid4{grid-template-columns:1fr 1fr}
-    .tools{grid-template-columns:1fr 1fr}
-    .ch,.sub-h{grid-template-columns:1fr;gap:20px}
-    .ai-points{grid-template-columns:1fr}
-    .figs{grid-template-columns:repeat(3,1fr)}
+    :root{--cols:repeat(2,minmax(0,1fr))}
+    .cover-grid>.chart,.cover-grid>div:last-child,.close .body{grid-column:1/-1}
+    .ch>:last-child,.sub-h p{grid-column:1/-1}
+    .ch,.sub-h{gap:12px}
+    .seg .row .m{grid-column:auto}
+    .seg li span{grid-column:auto}
+    .close .body{padding-right:0}
     .links a.hide-m{display:none}
     .menu{display:block}
     header.open .mnav{display:block}
     section{padding:44px 0}
   }
   @media (max-width:560px){
+    :root{--cols:minmax(0,1fr);--gap:12px}
     .wrap{padding-inline:16px}
-    .run .long{display:none}
     .links .btn{display:none}
     .cover-head{grid-template-columns:1fr}.seal{width:110px;order:-1}
-    .note .grid4,.tools,.gov{grid-template-columns:1fr}
-    .figs{grid-template-columns:1fr 1fr}
+    .figs,.ai-points{grid-template-columns:1fr 1fr}
     .chart h4 span:last-child{display:none}
-    .seg .kpi{grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:6px}
-    .seg .kpi div{flex-direction:column;gap:2px;padding:8px 10px}
-    .seg .kpi b{font-size:13pt}
-    .seg li{grid-template-columns:1fr;gap:2px}
-    .seg li span{text-align:left}
+    .seg .row{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+    .seg .row .m{grid-column:1/-1;order:-1;border-top:0;padding:0}
+    .seg .row .k{padding:8px 10px}
+    .seg .row .k b{font-size:13pt}
+    .seg li{gap:2px}
+    .seg li span,.seg .ctx,.close .body p,.tool p,.gc span{text-align:left}
   }
   @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .reveal{translate:none}}
 </style>
@@ -237,7 +239,7 @@
       <div class="cover-grid">
         <div class="chart">
           <h4><span data-i18n="cv_ch">Career, 2013–2026</span><span data-i18n="cv_ch2">four countries · three continents</span></h4>
-          <svg id="careerChart" viewBox="0 0 720 222" role="img" aria-label="Career timeline from 2013 to 2026 across Germany, Spain, the USA, Taiwan and Japan"></svg>
+          <svg id="careerChart" viewBox="0 0 580 222" role="img" aria-label="Career timeline from 2013 to 2026 across Germany, Spain, the USA, Taiwan and Japan"></svg>
           <p class="src" data-i18n="cv_src">Roles drawn to scale by year.</p>
         </div>
         <div>
@@ -264,11 +266,9 @@
       <div class="figs reveal">
         <div class="fc"><b class="hl">US$1.3M</b><span data-i18n="m1">Strategic investment</span><small data-i18n="m1s">At a US$18M valuation · business plan and due diligence</small><i>3.1</i></div>
         <div class="fc"><b class="">US$200M+</b><span data-i18n="m2">Assets under management</span><small data-i18n="m2s">13 hotel properties and three brands · current role</small><i>3.1</i></div>
-        <div class="fc"><b class="">+7%</b><span data-i18n="m3">ROI, year on year</span><small data-i18n="m3s">Asset-performance management and capital reallocation</small><i>3.1</i></div>
         <div class="fc"><b class="hl">+4,500%</b><span data-i18n="m4">EBT growth</span><small data-i18n="m4s">Turnaround after two years of decline · GoGo World</small><i>3.2</i></div>
         <div class="fc"><b class="">US$400K+</b><span data-i18n="m5">Annual tax savings</span><small data-i18n="m5s">Compliant transfer-pricing structures across Asia</small><i>3.2</i></div>
         <div class="fc"><b class="" data-i18n="m6v">−28 days</b><span data-i18n="m6">Cash-to-cash cycle</span><small data-i18n="m6s">Centralised cash management · financial costs −23%</small><i>3.2</i></div>
-        <div class="fc"><b class="">US$1B</b><span data-i18n="m10">Group revenue</span><small data-i18n="m10s">Up to US$1B across 10+ countries · Grupo Sesé</small><i>3.4</i></div>
         <div class="fc"><b class="">US$88M</b><span data-i18n="m7">Syndicated loan modelled</span><small data-i18n="m7s">Dynamic model of the loan's impact · Grupo Sesé</small><i>3.4</i></div>
         <div class="fc"><b class="">4+</b><span data-i18n="m8">Acquisitions completed</span><small data-i18n="m8s">Europe and the Americas, into IFRS consolidation</small><i>3.4</i></div>
         <div class="fc"><b class="" data-i18n="m9v">&lt; 30 s</b><span data-i18n="m9">Management report</span><small data-i18n="m9s">Produced in seconds with AI-built tools · current role</small><i>2</i></div>
@@ -284,6 +284,7 @@
       <div class="ai-points reveal">
         <div><b data-i18n="ap1">&lt; 30 s</b><span data-i18n="ap1d">to produce a management report, with automation built in-house with AI</span></div>
         <div><b data-i18n="ap2">Mandatory</b><span data-i18n="ap2d">Anthropic AI training for the accounting team; AI fluency is a hiring criterion</span></div>
+        <div><b>4</b><span data-i18n="ap4d">AI tools built in-house with Claude, shown below with sample data</span></div>
         <div><b>1</b><span data-i18n="ap3d">reconciled P&amp;L and KPI dataset for 13 properties, feeding the group's AI analytics platform</span></div>
       </div>
       <div class="tools" id="tool-list"></div>
@@ -303,8 +304,7 @@
       <div class="gov reveal">
         <div class="gc"><b data-i18n="g1">Fraud risk and controls</b><span data-i18n="g1d">Certified Fraud Examiner (ACFE). Receivables cut 50% and a subsidiary's credit rating raised 17%.</span></div>
         <div class="gc"><b data-i18n="g2">Audits in four GAAPs</b><span data-i18n="g2d">Closes and audits under US GAAP, IFRS, JGAAP and HK GAAP with Deloitte, Mazars, BDO, RSM and PKF.</span></div>
-        <div class="gc"><b data-i18n="g3">Board reporting</b><span data-i18n="g3d">Board pack, valuation and KPI framework to public-company standards, ready for a raise, IPO or exit.</span></div>
-        <div class="gc"><b data-i18n="g4">Legal structuring</b><span data-i18n="g4d">Joint ventures and development projects through project SPEs; audits and statutory filings across entities.</span></div>
+        <div class="gc"><b data-i18n="g3">Board reporting and structuring</b><span data-i18n="g3d">Board pack, valuation and KPIs to public-company standards; JVs and project SPEs with audits and statutory filings.</span></div>
         <div class="gc"><b data-i18n="g5">AI with controls</b><span data-i18n="g5d">Every tool keeps an audit trail, follows delegation of authority and cites its sources. No guessing.</span></div>
       </div>
     </div>
@@ -322,25 +322,30 @@
           </ul></div>
         <div class="note reveal"><h3><span>5.2</span><span data-i18n="nt2">Education</span></h3>
           <ul>
-            <li><b data-i18n="e1">Executive Postgraduate, Financial Management</b><span>ESIC · 2015</span></li>
-            <li><b data-i18n="e3">Financial Advising and Wealth Management</b><span>CESTE · 2020</span></li>
-            <li><b data-i18n="e2">Degree in Business Administration (4-year)</b><span data-i18n="e2s">Univ. de Zaragoza · 2012</span></li>
+            <li><b data-i18n="e1">Financial Management</b><span data-i18n="e1s">Executive Postgraduate · ESIC · 2015</span></li>
+            <li><b data-i18n="e3">Wealth Management</b><span data-i18n="e3s">Financial Advising · CESTE · 2020</span></li>
+            <li><b data-i18n="e2">Business Administration</b><span data-i18n="e2s">Degree · Univ. de Zaragoza · 2012</span></li>
           </ul></div>
-        <div class="note reveal"><h3><span>5.3</span><span data-i18n="nt3">Certifications and authorship</span></h3>
+        <div class="note reveal"><h3><span>5.3</span><span data-i18n="nt3">Certifications</span></h3>
           <ul>
             <li><b>Certified Fraud Examiner (CFE)</b><span>ACFE</span></li>
-            <li><b>Financial Planning &amp; Analysis Modeling (CFPAM™)</b><span data-i18n="cert">Certification</span></li>
+            <li><b>FP&amp;A Modeling (CFPAM™)</b><span data-i18n="cert">Certification</span></li>
             <li><b>Certified Product Manager (FH)</b><span data-i18n="cert2">Certification</span></li>
             <li><b>Fathom Advisor</b><span data-i18n="cert3">Certification</span></li>
-            <li><b data-i18n="au">Author, "A to Z of Financial Terms"</b><span>Amazon · 2021</span></li>
           </ul></div>
-        <div class="note reveal"><h3><span>5.4</span><span data-i18n="nt4">Languages and systems</span></h3>
+        <div class="note reveal"><h3><span>5.4</span><span data-i18n="nt4">Languages</span></h3>
           <ul>
             <li><b data-i18n="la1">Spanish</b><span data-i18n="la1s">native</span></li>
             <li><b data-i18n="la2">English · German</b><span data-i18n="la2s">fluent</span></li>
             <li><b data-i18n="la3">Mandarin</b><span data-i18n="la3s">professional working</span></li>
             <li><b data-i18n="la4">Italian</b><span data-i18n="la4s">limited</span></li>
-            <li><b data-i18n="sy">Systems</b><span>Claude (MCP) · Dynamics NAV · QuickBooks · Fathom · Excel</span></li>
+          </ul></div>
+        <div class="note reveal"><h3><span>5.5</span><span data-i18n="nt5">Systems</span></h3>
+          <ul>
+            <li><b>Microsoft Office</b><span>Excel · Word · PowerPoint</span></li>
+            <li><b>Oracle · Dynamics NAV</b><span>ERP</span></li>
+            <li><b>QuickBooks · Fathom</b><span data-i18n="sy2">Accounting and reporting</span></li>
+            <li><b>Claude (MCP)</b><span data-i18n="sy3">AI tools</span></li>
           </ul></div>
       </div>
     </div>
@@ -402,21 +407,21 @@ const T = { es: {
   c4_p:"No compro una herramienta para cada problema. Construyo con Claude las que necesita mi equipo, le formo para usarlas con criterio y mantengo el control en todas. Las figuras son animaciones en vivo con datos de ejemplo.",
   ap1d:"para generar un informe de gestión, con automatización construida internamente con IA",
   ap2:"Obligatoria", ap2d:"formación en IA de Anthropic para el equipo contable; la soltura con IA es criterio de contratación",
+  ap4d:"herramientas de IA construidas internamente con Claude, abajo con datos de ejemplo",
   ap3d:"conjunto de datos de resultados y KPIs conciliado para 13 hoteles, que alimenta la plataforma de analítica con IA del grupo",
   c5:"04 · Gobierno", c5_t:"Auditorías limpias, <em>control primero.</em>",
   g1:"Riesgo de fraude y control", g1d:"Certified Fraud Examiner (ACFE). Cuentas a cobrar −50% y rating crediticio de una filial +17%.",
   g2:"Auditorías en cuatro normativas", g2d:"Cierres y auditorías bajo US GAAP, NIIF, JGAAP y HK GAAP con Deloitte, Mazars, BDO, RSM y PKF.",
-  g3:"Reporting al consejo", g3d:"Reporting, valoración y KPIs con estándares de cotizada, listos para una ronda, una salida a bolsa o una venta.",
+  g3:"Reporting al consejo y estructuración", g3d:"Reporting, valoración y KPIs con estándares de cotizada; joint ventures y SPEs con auditorías y obligaciones legales.",
   g4:"Estructuración legal", g4d:"Joint ventures y proyectos de desarrollo mediante SPEs; auditorías y obligaciones legales en varias sociedades.",
   g5:"IA con control", g5d:"Cada herramienta guarda pista de auditoría, respeta la delegación de autoridad y cita sus fuentes. Sin inventar.",
-  c6:"05 · Notas", c6_t:"Competencias, formación <em>y credenciales.</em>", nt1:"Competencias clave", nt2:"Formación", nt3:"Certificaciones y publicaciones", nt4:"Idiomas y sistemas",
+  c6:"05 · Notas", c6_t:"Competencias, formación <em>y credenciales.</em>", nt1:"Competencias clave", nt2:"Formación", nt3:"Certificaciones", nt4:"Idiomas", nt5:"Sistemas", sy2:"Contabilidad y reporting", sy3:"Herramientas de IA",
   cp1:"Estrategia financiera y FP&A", cp2:"Cierre y consolidación multisociedad", cp3:"Tesorería, caja y circulante", cp4:"Fiscalidad APAC y precios de transferencia",
   cp5:"Captación de capital y equity story", cp6:"M&A transfronterizo y due diligence", cp7:"Estructuración de JV, SPE y operaciones", cp8:"Preparación para salida a bolsa o venta",
   cp9:"Reporting al consejo y gobierno", cp10:"Control interno y riesgo de fraude", cp11:"Herramientas de IA y automatización financiera", cp12:"Dirección de equipos distribuidos",
-  e1:"Posgrado ejecutivo en Dirección Financiera", e2:"Licenciatura en Administración de Empresas (4 años)", e2s:"Univ. de Zaragoza · 2012", e3:"Asesoramiento Financiero y Gestión Patrimonial",
+  e1:"Dirección Financiera", e1s:"Posgrado ejecutivo · ESIC · 2015", e2:"Administración de Empresas", e2s:"Licenciatura · Univ. de Zaragoza · 2012", e3:"Gestión Patrimonial", e3s:"Asesoramiento financiero · CESTE · 2020",
   cert:"Certificación", cert2:"Certificación", cert3:"Certificación",
-  au:"Autor de \"A to Z of Financial Terms\"",
-  la1:"Español", la1s:"nativo", la2:"Inglés · Alemán", la2s:"fluido", la3:"Mandarín", la3s:"nivel profesional", la4:"Italiano", la4s:"básico", sy:"Sistemas",
+  la1:"Español", la1s:"nativo", la2:"Inglés · Alemán", la2s:"fluido", la3:"Mandarín", la3s:"nivel profesional", la4:"Italiano", la4s:"básico",
   ir_e:"Email", ft:"Diseñado y construido con IA · cada gráfico es código en vivo"
 }, en: {} };
 document.querySelectorAll('[data-i18n]').forEach(el => T.en[el.dataset.i18n] = el.textContent);
@@ -427,13 +432,13 @@ const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 window.drawCareer = function(){
   const es = document.documentElement.lang === 'es';
   const ROLES = [
-    [2013 + 4/12, 2014 + 5/12, 'Financial Controller · Grupo Sesé', es ? 'Fráncfort' : 'Frankfurt', '#9AA8BC'],
-    [2014 + 5/12, 2016 + 5/12, es ? 'Director financiero adjunto · Grupo Sesé' : 'Deputy Chief Financial Officer · Grupo Sesé', 'Zaragoza', '#5B7BA8'],
-    [2016 + 5/12, 2018, es ? 'Director financiero · Grupo Sesé EE. UU.' : 'Chief Financial Officer · Grupo Sesé USA', 'Chattanooga', '#5B7BA8'],
-    [2018, 2023 + 8/12, es ? 'Director financiero · GoGo World' : 'Chief Financial Officer · GoGo World', es ? 'Tokio' : 'Tokyo', '#1B3A6B'],
-    [2023 + 8/12, 2026 + 9/12, es ? 'Director financiero · Wayfarer' : 'Chief Financial Officer · Wayfarer', es ? 'Tokio' : 'Tokyo', '#2F6FED']
+    [2013 + 4/12, 2014 + 5/12, 'Grupo Sesé', es ? 'Fráncfort' : 'Frankfurt', '#9AA8BC'],
+    [2014 + 5/12, 2016 + 5/12, es ? 'Grupo Sesé, sede central' : 'Grupo Sesé HQ', 'Zaragoza', '#5B7BA8'],
+    [2016 + 5/12, 2018, es ? 'Grupo Sesé EE. UU.' : 'Grupo Sesé USA', 'Chattanooga', '#5B7BA8'],
+    [2018, 2023 + 8/12, 'GoGo World', es ? 'Tokio' : 'Tokyo', '#1B3A6B'],
+    [2023 + 8/12, 2026 + 9/12, 'Wayfarer', es ? 'Tokio' : 'Tokyo', '#2F6FED']
   ];
-  const L = 12, R = 708, top = 16, row = 34, x = y => L + (y - 2013) / (2026.83 - 2013) * (R - L);
+  const L = 12, R = 568, top = 16, row = 34, x = y => L + (y - 2013) / (2026.83 - 2013) * (R - L);
   let s = '';
   for (let y = 2013; y <= 2026; y++) { const xx = x(y);
     s += `<line x1="${xx}" x2="${xx}" y1="${top - 6}" y2="${top + ROLES.length * row + 4}" stroke="${y % 2 ? '#F0F2F5' : '#E8EBF0'}"/>`;
@@ -469,7 +474,7 @@ if ('IntersectionObserver' in window && !reduce) io = new IntersectionObserver(e
 window.PrizmaReveal = els => els.forEach(el => { el.classList.add('reveal'); io ? io.observe(el) : el.classList.add('shown'); });
 </script>
 <script src="previews.js?v=6"></script>
-<script src="portfolio.js?v=13"></script>
+<script src="portfolio.js?v=14"></script>
 <script>
 let saved = null; try { saved = localStorage.getItem('jm-lang'); } catch(e){}
 setLang(saved === 'es' ? 'es' : 'en');

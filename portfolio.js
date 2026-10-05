@@ -109,9 +109,8 @@
       if (c.gap) return `<p class="gap">${esc(c.gap[l])}</p>`;
       const d = c[l];
       return `<article class="seg">
-        <div class="meta"><span class="label">${esc(d.label)}</span><span class="when">${esc(l === 'es' ? c.whenEs : c.when)}</span></div>
-        <div class="head"><h3>${esc(d.t)}</h3><span class="where">${esc(d.where)}</span></div>
-        <div class="kpi">${d.kpi.map(([v, s]) => `<div><b>${esc(v)}</b><span>${esc(s)}</span></div>`).join('')}</div>
+        <div class="head"><span class="label">${esc(d.label)}</span><h3>${esc(d.t)}</h3></div>
+        <div class="row">${d.kpi.map(([v, s]) => `<div class="k"><b>${esc(v)}</b><span>${esc(s)}</span></div>`).join('')}<div class="m"><span class="when">${esc(l === 'es' ? c.whenEs : c.when)}</span><span class="where">${esc(d.where)}</span></div></div>
         <p class="ctx">${esc(d.ctx)}</p><ul>${d.pts.map(p => { const [h, t] = p.split('|'); return `<li><b>${esc(h)}</b><span>${esc(t)}</span></li>`; }).join('')}</ul>
       </article>`; }).join('');
     const fig = l === 'es' ? 'Figura' : 'Figure', smp = l === 'es' ? 'Datos de ejemplo' : 'Sample data';
