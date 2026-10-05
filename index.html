@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Javier Munoz, CFE — CFO, APAC</title>
-<meta name="description" content="Javier Munoz, CFE. Chief Financial Officer with 13 years of finance leadership, the last eight in Asia: capital raising, turnarounds, cross-border M&A, multi-GAAP audits and an AI-first finance function.">
+<meta name="description" content="Javier Munoz, CFE. Chief Financial Officer with 10+ years of finance leadership, the last eight in Asia: capital raising, turnarounds, cross-border M&A, multi-GAAP audits and an AI-first finance function.">
 <meta property="og:title" content="Javier Munoz, CFE — Chief Financial Officer, APAC">
-<meta property="og:description" content="13 years of finance leadership. Capital, turnarounds and an AI-first finance function.">
+<meta property="og:description" content="10+ years of finance leadership. Capital, turnarounds and an AI-first finance function.">
 <meta name="theme-color" content="#F5F6F8">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231B3A6B'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='15' fill='%23F5F6F8' text-anchor='middle'%3EJM%3C/text%3E%3C/svg%3E">
 <style>
@@ -46,8 +46,7 @@
   .links .btn{padding:7px 14px;font-size:13px}
 
   .cover{padding:36px 0 40px;border-bottom:1px solid var(--ink)}
-  .cover-top{display:flex;justify-content:space-between;gap:16px;font:500 9pt var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--steel);padding-bottom:16px;border-bottom:1px solid var(--mist)}
-  .cover-head{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;margin-top:24px}
+  .cover-head{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
   .cover h1{font-size:clamp(30px,5vw,48px);line-height:1;letter-spacing:-.02em;white-space:nowrap}
   .cover .role{font:600 9.5pt var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-top:18px}
   .cover .sub{font-family:var(--serif);font-style:italic;font-weight:400;font-size:12pt;color:var(--navy);margin-top:6px;line-height:1.25}
@@ -59,11 +58,10 @@
   .chart svg{display:block;width:100%;height:auto;margin-top:10px;overflow:visible}
   .chart .src{font:400 8.5pt var(--mono);color:var(--steel);margin-top:4px}
   .kf{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-  .kf div{background:var(--sheet);border:1px solid var(--mist);border-top:2px solid var(--ink);padding:10px 14px;display:flex;flex-direction:column;gap:4px}
-  .kf div:first-child{grid-column:1/-1;flex-direction:row;align-items:baseline;gap:14px}
-  .kf b{font:600 18pt/1.1 var(--serif);color:var(--ink);white-space:nowrap;order:-1}
+  .kf div{background:var(--sheet);border:1px solid var(--mist);border-top:2px solid var(--ink);padding:12px 14px;display:flex;flex-direction:column;gap:2px;min-width:0}
+  .kf b{font:600 18pt/1.1 var(--serif);color:var(--ink);white-space:nowrap}
   .kf b.hl{color:var(--signal)}
-  .kf span{font-size:9.5pt;line-height:1.35;color:var(--steel)}
+  .kf span{font-size:9.5pt;line-height:1.35;color:var(--steel);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .cover-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
 
   section{padding:56px 0;border-bottom:1px solid var(--mist)}
@@ -71,7 +69,7 @@
   .ch .no{font:600 9pt var(--mono);letter-spacing:.05em;color:var(--navy);text-transform:uppercase;border-top:2px solid var(--navy);padding-top:10px}
   .ch h2{font-size:14pt;line-height:1.25}
   .ch h2 em{color:var(--navy)}
-  .ch p{color:var(--steel);font-size:11pt;margin-top:4px;max-width:62ch}
+  .ch p{color:var(--steel);font-size:11pt;margin-top:4px}
 
   .letter{display:grid;grid-template-columns:200px 1fr;gap:32px}
   .letter .body{columns:2 300px;column-gap:40px;font-size:11pt;line-height:1.55}
@@ -82,6 +80,13 @@
   .aside b{display:block;font:600 8.5pt var(--mono);color:var(--navy);letter-spacing:.06em;text-transform:uppercase;margin-top:12px}
   .aside b:first-child{margin-top:0}
 
+  .figs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+  .fc{position:relative;display:grid;grid-row:span 3;grid-template-rows:subgrid;row-gap:4px;background:var(--sheet);border:1px solid var(--mist);border-top:2px solid var(--ink);padding:14px 16px}
+  .fc b{font:600 18pt/1.1 var(--serif);color:var(--ink);white-space:nowrap}
+  .fc b.hl{color:var(--signal)}
+  .fc span{font-size:10.5pt;line-height:1.35;color:var(--ink)}
+  .fc small{font-size:9pt;line-height:1.4;color:var(--steel)}
+  .fc i{position:absolute;top:10px;right:12px;font:400 8pt var(--mono);font-style:normal;color:var(--steel)}
   .tbl{overflow-x:auto}
   table.fig{width:100%;border-collapse:collapse;font-size:11pt}
   table.fig th{font:600 8.5pt var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--steel);text-align:left;padding:10px 12px;border-bottom:2px solid var(--ink)}
@@ -161,6 +166,7 @@
     .tools{grid-template-columns:1fr 1fr}
     .ch,.letter,.sub-h{grid-template-columns:1fr;gap:20px}
     .ai-points{grid-template-columns:1fr}
+    .figs{grid-template-columns:repeat(3,1fr)}
     .links a.hide-m{display:none}
     section{padding:44px 0}
   }
@@ -169,8 +175,9 @@
     .run .long{display:none}
     .links .btn{display:none}
     .cover-head{grid-template-columns:1fr}.seal{width:110px;order:-1}
-    .cover-top span:last-child{display:none}
     .note .grid2,.tools{grid-template-columns:1fr}
+    .figs{grid-template-columns:1fr 1fr}
+    .chart h4 span:last-child{display:none}
     .seg .kpi{grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:6px}
     .seg .kpi div{flex-direction:column;gap:2px;padding:8px 10px}
     .seg .kpi b{font-size:13pt}
@@ -183,7 +190,7 @@
 <header>
   <div class="wrap">
     <nav>
-      <a class="run" href="#top"><b>Javier Munoz, CFE</b><span class="long"> · <span data-i18n="run">Annual Report 2026</span></span></a>
+      <a class="run" href="#top"><b>Javier Munoz, CFE</b></a>
       <div class="links">
         <a class="hide-m" href="#figures" data-i18n="n2">Key figures</a>
         <a class="hide-m" href="#ai" data-i18n="n4">Deliverables</a>
@@ -199,12 +206,11 @@
 <main id="top">
   <section class="cover" aria-label="Cover">
     <div class="wrap">
-      <div class="cover-top"><span data-i18n="cv_k">Annual Report 2026</span><span data-i18n="cv_loc">Kaohsiung, Taiwan</span></div>
       <div class="cover-head">
         <div>
           <h1>Javier Munoz</h1>
           <p class="role" data-i18n="cv_role">CFE · Chief Financial Officer · APAC</p>
-          <p class="sub" data-i18n="cv_sub">Thirteen years of finance leadership. Capital, turnarounds and an AI-first finance function.</p>
+          <p class="sub" data-i18n="cv_sub">10+ years of finance leadership. Capital, turnarounds and an AI-first finance function.</p>
         </div>
         <div class="seal"><img src="javier.png" alt="Javier Munoz"></div>
       </div>
@@ -216,11 +222,12 @@
         </div>
         <div>
           <div class="kf">
-            <div><span data-i18n="k1">Years in finance leadership</span><b>13</b></div>
-            <div><span data-i18n="k2">Strategic investment, business plan and due diligence, 2026</span><b class="hl">US$1.3M</b></div>
-            <div><span data-i18n="k3">Assets under management today</span><b>US$200M+</b></div>
-            <div><span data-i18n="k4">EBT growth in a turnaround</span><b>+4,500%</b></div>
-            <div><span data-i18n="k5">Group revenue, Grupo Sesé (up to)</span><b>US$1B</b></div>
+            <div><b>10+</b><span data-i18n="k1">Years leading finance</span></div>
+            <div><b>US$200M+</b><span data-i18n="k3">Assets managed today</span></div>
+            <div><b class="hl">US$1.3M</b><span data-i18n="k2">Strategic investment</span></div>
+            <div><b class="hl">+4,500%</b><span data-i18n="k4">EBT growth, turnaround</span></div>
+            <div><b>US$1B</b><span data-i18n="k5">Revenue, Grupo Sesé</span></div>
+            <div><b>+7%</b><span data-i18n="k6">ROI, year on year</span></div>
           </div>
           <div class="cover-cta">
             <a class="btn solid" href="#ai"><span data-i18n="cta1">See the deliverables</span><span>→</span></a>
@@ -236,13 +243,12 @@
       <div class="ch"><div class="no" data-i18n="c1">01 · Letter</div><h2 data-i18n-html="c1_t">From the CFO, <em>to the reader.</em></h2></div>
       <div class="letter reveal">
         <div class="aside">
-          <b data-i18n="as1">Based</b><span data-i18n="as1v">Kaohsiung, Taiwan</span>
           <b data-i18n="as3">Languages</b><span data-i18n="as3v">Spanish, English, German, Mandarin, Italian</span>
           <b data-i18n="as4">Standards</b><span>US GAAP · IFRS · JGAAP · HK GAAP</span>
         </div>
         <div>
           <div class="body">
-            <p data-i18n="l1">For thirteen years I have run finance where it is hardest: multi-entity groups, several jurisdictions, and moments when the numbers decide whether a company is funded, sold or saved. The last eight of those years have been in Asia, across Japan, Hong Kong and Korea.</p>
+            <p data-i18n="l1">For more than ten years I have run finance where it is hardest: multi-entity groups, several jurisdictions, and moments when the numbers decide whether a company is funded, sold or saved. The last eight of those years have been in Asia, across Japan, Hong Kong and Korea.</p>
             <p data-i18n="l2">Today I am CFO of a Japanese hospitality investment group with more than US$200M in assets across 13 properties. In 2026 I led two investor due diligences: a US$1.3M strategic corporate investment at a US$18M valuation, built on a business plan I wrote myself, and an ongoing liquidity event that remains confidential.</p>
             <p data-i18n="l3">Before that I turned two businesses around, grew EBT by 4,500% at a start-up and supported its owner's exit, and in Europe I completed four acquisitions, modelled an US$88M syndicated loan and unified reporting for ten countries.</p>
             <p data-i18n="l4">What sets my finance function apart is how it works. I build our tools with AI myself, I made AI training mandatory for the team, and a management report now takes under thirty seconds. I am a Certified Fraud Examiner, so every one of those tools is built with controls first.</p>
@@ -256,22 +262,17 @@
   <section id="figures">
     <div class="wrap">
       <div class="ch"><div class="no" data-i18n="c2">02 · Key figures</div><h2 data-i18n-html="c2_t">Results, <em>by the numbers.</em></h2></div>
-      <div class="tbl reveal">
-        <table class="fig">
-          <thead><tr><th data-i18n="t_m">Measure</th><th class="r" data-i18n="t_v">Figure</th><th data-i18n="t_n">Note</th></tr></thead>
-          <tbody>
-            <tr><td><span data-i18n="m1">Strategic corporate investment: business plan and due diligence</span><small data-i18n="m1s">At a US$18M valuation, backed by a self-built business plan · 2026</small></td><td class="r hl">US$1.3M</td><td class="n">4.1</td></tr>
-            <tr><td><span data-i18n="m2">Assets under management</span><small data-i18n="m2s">13 hotel properties, three brands · current role</small></td><td class="r">US$200M+</td><td class="n">4.1</td></tr>
-            <tr><td><span data-i18n="m3">Return on investment, year on year</span><small data-i18n="m3s">Asset-performance management and capital reallocation</small></td><td class="r">+7%</td><td class="n">4.1</td></tr>
-            <tr><td><span data-i18n="m4">EBT growth after two years of decline</span><small data-i18n="m4s">Turnaround and owner's exit · GoGo World</small></td><td class="r hl">+4,500%</td><td class="n">4.2</td></tr>
-            <tr><td><span data-i18n="m5">Annual tax savings</span><small data-i18n="m5s">Compliant transfer-pricing structures across Asia</small></td><td class="r">US$400K+</td><td class="n">4.2</td></tr>
-            <tr><td><span data-i18n="m6">Cash-to-cash cycle</span><small data-i18n="m6s">Centralised cash management · financial costs −23%</small></td><td class="r" data-i18n="m6v">−28 days</td><td class="n">4.2</td></tr>
-            <tr><td><span data-i18n="m10">Group revenue</span><small data-i18n="m10s">Up to US$1B · Deputy CFO at HQ, 10+ countries · Grupo Sesé</small></td><td class="r">US$1B</td><td class="n">4.4</td></tr>
-            <tr><td><span data-i18n="m7">Syndicated financing modelled</span><small data-i18n="m7s">Dynamic model forecasting the loan's impact · Grupo Sesé</small></td><td class="r">US$88M</td><td class="n">4.4</td></tr>
-            <tr><td><span data-i18n="m8">Acquisitions completed</span><small data-i18n="m8s">Europe and the Americas, integrated into IFRS consolidation</small></td><td class="r">4+</td><td class="n">4.4</td></tr>
-            <tr><td><span data-i18n="m9">Time to produce a management report</span><small data-i18n="m9s">Automated with AI-built tools · current role</small></td><td class="r" data-i18n="m9v">&lt; 30 s</td><td class="n">3</td></tr>
-          </tbody>
-        </table>
+      <div class="figs reveal">
+        <div class="fc"><b class="hl">US$1.3M</b><span data-i18n="m1">Strategic investment</span><small data-i18n="m1s">At a US$18M valuation · business plan and due diligence</small><i>4.1</i></div>
+        <div class="fc"><b class="">US$200M+</b><span data-i18n="m2">Assets under management</span><small data-i18n="m2s">13 hotel properties and three brands · current role</small><i>4.1</i></div>
+        <div class="fc"><b class="">+7%</b><span data-i18n="m3">ROI, year on year</span><small data-i18n="m3s">Asset-performance management and capital reallocation</small><i>4.1</i></div>
+        <div class="fc"><b class="hl">+4,500%</b><span data-i18n="m4">EBT growth</span><small data-i18n="m4s">Turnaround after two years of decline · GoGo World</small><i>4.2</i></div>
+        <div class="fc"><b class="">US$400K+</b><span data-i18n="m5">Annual tax savings</span><small data-i18n="m5s">Compliant transfer-pricing structures across Asia</small><i>4.2</i></div>
+        <div class="fc"><b class="" data-i18n="m6v">−28 days</b><span data-i18n="m6">Cash-to-cash cycle</span><small data-i18n="m6s">Centralised cash management · financial costs −23%</small><i>4.2</i></div>
+        <div class="fc"><b class="">US$1B</b><span data-i18n="m10">Group revenue</span><small data-i18n="m10s">Up to US$1B across 10+ countries · Grupo Sesé</small><i>4.4</i></div>
+        <div class="fc"><b class="">US$88M</b><span data-i18n="m7">Syndicated loan modelled</span><small data-i18n="m7s">Dynamic model of the loan's impact · Grupo Sesé</small><i>4.4</i></div>
+        <div class="fc"><b class="">4+</b><span data-i18n="m8">Acquisitions completed</span><small data-i18n="m8s">Europe and the Americas, into IFRS consolidation</small><i>4.4</i></div>
+        <div class="fc"><b class="" data-i18n="m9v">&lt; 30 s</b><span data-i18n="m9">Management report</span><small data-i18n="m9s">Produced in seconds with AI-built tools · current role</small><i>3</i></div>
       </div>
     </div>
   </section>
@@ -359,12 +360,11 @@
       <div class="ch"><div class="no" data-i18n="c7">07 · Investor relations</div><div></div></div>
       <div class="ir reveal">
         <div>
-          <h2 data-i18n-html="ir_t">Any figure in this report, <em>on a call.</em></h2>
+          <h2 data-i18n-html="ir_t">Any figure on this page, <em>on a call.</em></h2>
         </div>
         <dl class="card">
           <dt data-i18n="ir_e">Email</dt><dd><a href="mailto:fjmunoz@outlook.com">fjmunoz@outlook.com</a></dd>
           <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/javiermunoz-cfe" target="_blank" rel="noopener">linkedin.com/in/javiermunoz-cfe</a></dd>
-          <dt data-i18n="ir_b">Based</dt><dd data-i18n="ir_bv">Kaohsiung, Taiwan</dd>
         </dl>
       </div>
     </div>
@@ -375,28 +375,28 @@
 
 <script>
 const T = { es: {
-  run:"Informe anual 2026", n2:"Cifras clave", n3:"Trayectoria", n4:"Entregables", n6:"Notas", n7:"Contacto",
-  cv_k:"Informe anual 2026", cv_loc:"Kaohsiung, Taiwán", cv_role:"CFE · Director financiero · APAC",
-  cv_sub:"Trece años dirigiendo finanzas. Capital, reestructuraciones y una función financiera basada en IA.",
+  n2:"Cifras clave", n3:"Trayectoria", n4:"Entregables", n6:"Notas", n7:"Contacto",
+  cv_role:"CFE · Director financiero · APAC",
+  cv_sub:"Más de 10 años dirigiendo finanzas. Capital, reestructuraciones y una función financiera basada en IA.",
   cv_ch:"Trayectoria, 2013–2026", cv_ch2:"cuatro países · tres continentes", cv_src:"Puestos dibujados a escala por año.",
-  k1:"Años dirigiendo finanzas", k2:"Inversión estratégica, plan de negocio y due diligence, 2026", k3:"Activos gestionados hoy", k4:"Crecimiento del EBT en una reestructuración", k5:"Facturación del grupo, Grupo Sesé (hasta)",
+  k1:"Años dirigiendo finanzas", k2:"Inversión estratégica", k3:"Activos gestionados hoy", k4:"EBT, reestructuración", k5:"Facturación, Grupo Sesé", k6:"ROI interanual",
   cta1:"Ver los entregables", cta2:"Contactar",
   c1:"01 · Carta", c1_t:"Del CFO, <em>al lector.</em>",
-  as1:"Residencia", as1v:"Kaohsiung, Taiwán", as3:"Idiomas", as3v:"Español, inglés, alemán, mandarín, italiano", as4:"Normativas",
-  l1:"Durante trece años he dirigido finanzas donde más cuesta: grupos multisociedad, varias jurisdicciones y momentos en los que los números deciden si una empresa se financia, se vende o se salva. Los últimos ocho años, en Asia: Japón, Hong Kong y Corea.",
+  as3:"Idiomas", as3v:"Español, inglés, alemán, mandarín, italiano", as4:"Normativas",
+  l1:"Durante más de diez años he dirigido finanzas donde más cuesta: grupos multisociedad, varias jurisdicciones y momentos en los que los números deciden si una empresa se financia, se vende o se salva. Los últimos ocho años, en Asia: Japón, Hong Kong y Corea.",
   l2:"Hoy soy CFO de un grupo japonés de inversión hotelera con más de 200 M US$ en activos y 13 hoteles. En 2026 he liderado dos due diligences de inversores: una inversión corporativa estratégica de 1,3 M US$ a una valoración de 18 M US$, basada en un plan de negocio que construí yo, y un evento de liquidez en curso que sigue siendo confidencial.",
   l3:"Antes reestructuré dos negocios, multipliqué el EBT de una start-up un 4.500% y acompañé la salida de su propietario; y en Europa completé cuatro adquisiciones, modelé un préstamo sindicado de 88 M US$ y unifiqué el reporting de diez países.",
   l4:"Lo que distingue a mi función financiera es cómo trabaja. Construyo yo mismo nuestras herramientas con IA, hice obligatoria la formación en IA para el equipo y un informe de gestión se genera ahora en menos de treinta segundos. Soy Certified Fraud Examiner, así que cada herramienta nace con el control primero.",
-  c2:"02 · Cifras clave", c2_t:"Resultados, <em>en cifras.</em>", t_m:"Indicador", t_v:"Cifra", t_n:"Nota",
-  m1:"Inversión corporativa estratégica: plan de negocio y due diligence", m1s:"A una valoración de 18 M US$, con un plan de negocio propio · 2026",
-  m2:"Activos gestionados", m2s:"13 hoteles, tres marcas · puesto actual",
-  m3:"Retorno de la inversión, interanual", m3s:"Gestión del rendimiento de activos y reasignación de capital",
-  m4:"Crecimiento del EBT tras dos años de caída", m4s:"Reestructuración y salida del propietario · GoGo World",
-  m5:"Ahorro fiscal anual", m5s:"Estructuras de precios de transferencia conformes en Asia",
-  m6:"Ciclo de caja", m6s:"Gestión de tesorería centralizada · costes financieros −23%", m6v:"−28 días",
-  m10:"Facturación del grupo", m10s:"Hasta 1.000 M US$ · Deputy CFO en la central, 10+ países · Grupo Sesé", m7:"Financiación sindicada modelada", m7s:"Modelo dinámico del impacto del préstamo · Grupo Sesé",
+  c2:"02 · Cifras clave", c2_t:"Resultados, <em>en cifras.</em>",
+  m1:"Inversión estratégica", m1s:"A una valoración de 18 M US$ · plan de negocio y due diligence",
+  m2:"Activos gestionados", m2s:"13 hoteles y tres marcas · puesto actual",
+  m3:"ROI interanual", m3s:"Gestión del rendimiento de activos y reasignación de capital",
+  m4:"Crecimiento del EBT", m4s:"Reestructuración tras dos años de caída · GoGo World",
+  m5:"Ahorro fiscal anual", m5s:"Precios de transferencia conformes en Asia",
+  m6:"Ciclo de caja", m6s:"Tesorería centralizada · costes financieros −23%", m6v:"−28 días",
+  m10:"Facturación del grupo", m10s:"Hasta 1.000 M US$ en más de 10 países · Grupo Sesé", m7:"Préstamo sindicado modelado", m7s:"Modelo dinámico del impacto del préstamo · Grupo Sesé",
   m8:"Adquisiciones completadas", m8s:"Europa y América, integradas en la consolidación NIIF",
-  m9:"Tiempo para generar un informe de gestión", m9s:"Automatizado con herramientas hechas con IA · puesto actual",
+  m9:"Informe de gestión", m9s:"Generado en segundos con herramientas de IA · puesto actual",
   c3:"04 · Trayectoria", c3_t:"Cinco puestos, <em>tres continentes.</em>", c3_p:"Cada puesto se presenta como un segmento: el contexto que me encontré y lo que cambió mientras estuve.",
   c4:"03 · Entregables", c4_t:"Una función financiera <em>basada en IA.</em>",
   rp_t:"Herramientas de <em>reporting.</em>", rp_p:"Reporting de consejo, de gestión, de consolidación y de valoración para grupos multisociedad. Con datos de ejemplo.",
@@ -417,8 +417,8 @@ const T = { es: {
   e1:"Posgrado ejecutivo en Dirección Financiera", e2:"Licenciatura en Administración de Empresas (4 años)", e2s:"Univ. de Zaragoza · 2012", e3:"Asesoramiento Financiero y Gestión Patrimonial",
   au:"Autor de \"A to Z of Financial Terms\"",
   la1:"Español", la1s:"nativo", la2:"Inglés · Alemán", la2s:"fluido", la3:"Mandarín", la3s:"nivel profesional", la4:"Italiano", la4s:"básico", sy:"Sistemas",
-  c7:"07 · Relación con inversores", ir_t:"Cualquier cifra de este informe, <em>en una llamada.</em>",
-  ir_e:"Email", ir_b:"Residencia", ir_bv:"Kaohsiung, Taiwán", ft:"Diseñado y construido con IA · cada gráfico es código en vivo"
+  c7:"07 · Relación con inversores", ir_t:"Cualquier cifra de esta página, <em>en una llamada.</em>",
+  ir_e:"Email", ft:"Diseñado y construido con IA · cada gráfico es código en vivo"
 }, en: {} };
 document.querySelectorAll('[data-i18n]').forEach(el => T.en[el.dataset.i18n] = el.textContent);
 document.querySelectorAll('[data-i18n-html]').forEach(el => T.en[el.dataset.i18nHtml] = el.innerHTML);
