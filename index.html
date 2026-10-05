@@ -70,7 +70,8 @@
   .kf b{font:600 18pt/1.1 var(--serif);color:var(--ink);white-space:nowrap}
   .kf b.hl{color:var(--signal)}
   .kf span{font-size:9.5pt;line-height:1.35;color:var(--steel);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .cover-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+  .cover-cta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+  .cover-cta .btn{justify-content:center;padding-inline:12px}
 
   section{padding:56px 0;border-bottom:1px solid var(--mist)}
   .ch{display:grid;grid-template-columns:200px 1fr;gap:32px;margin-bottom:28px;align-items:baseline}
@@ -95,7 +96,6 @@
   table.fig td.r{font:600 14pt var(--serif);white-space:nowrap}
   table.fig td.r.hl{color:var(--signal)}
   table.fig td.n{font:400 9pt var(--mono);color:var(--steel);white-space:nowrap}
-  #governance table.fig td:first-child{width:260px}
   table.fig td small{display:block;color:var(--steel);font-size:9.5pt;margin-top:2px}
 
   .seg{padding:22px 0;border-top:1px solid var(--mist)}
@@ -139,14 +139,18 @@
   .tool p.ai{margin-top:10px;padding-top:10px;border-top:1px solid var(--mist);color:var(--ink)}
   .tool p.ai::before{content:"";display:inline-block;width:8px;height:8px;background:var(--signal);margin-right:8px;vertical-align:1px}
 
-  .notes{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-  .note h3{font-size:13pt;margin-bottom:12px;display:flex;gap:12px;align-items:baseline}
+  .gov{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+  .gc{display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:6px;background:var(--sheet);border:1px solid var(--mist);border-top:2px solid var(--ink);padding:14px 16px}
+  .gc b{font:600 11pt/1.3 var(--serif);color:var(--navy)}
+  .gc span{font-size:10pt;line-height:1.45;color:var(--body)}
+  .notes{display:grid;grid-template-columns:repeat(3,1fr);gap:36px 40px}
+  .note.wide{grid-column:1/-1}
+  .note h3{font-size:13pt;margin-bottom:10px;display:flex;gap:10px;align-items:baseline}
   .note h3 span:first-child{font:600 10pt var(--mono);color:var(--navy)}
   .note ul{list-style:none;border-top:2px solid var(--ink)}
-  .note li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:7px 0;border-bottom:1px solid var(--mist);font-size:10.5pt}
-  .note li span{font:400 9pt var(--mono);color:var(--steel);text-align:right}
-  .note .grid2{display:grid;grid-template-columns:1fr 1fr;column-gap:24px}
-
+  .note li{display:flex;flex-direction:column;gap:1px;padding:9px 0;border-bottom:1px solid var(--mist);font-size:10.5pt}
+  .note li span{font:400 9pt var(--mono);color:var(--steel)}
+  .note .grid4{display:grid;grid-template-columns:repeat(4,1fr);column-gap:24px}
   .close{display:grid;grid-template-columns:1fr 360px;gap:48px;align-items:start}
   .close .body p{margin-bottom:14px;max-width:660px}
   .close .body p.lead{font:500 13pt/1.5 var(--serif);color:var(--ink)}
@@ -169,6 +173,8 @@
 
   @media (max-width:1000px){
     .cover-grid,.close,.notes{grid-template-columns:1fr}
+    .gov{grid-template-columns:1fr 1fr}
+    .note .grid4{grid-template-columns:1fr 1fr}
     .tools{grid-template-columns:1fr 1fr}
     .ch,.sub-h{grid-template-columns:1fr;gap:20px}
     .ai-points{grid-template-columns:1fr}
@@ -183,7 +189,7 @@
     .run .long{display:none}
     .links .btn{display:none}
     .cover-head{grid-template-columns:1fr}.seal{width:110px;order:-1}
-    .note .grid2,.tools{grid-template-columns:1fr}
+    .note .grid4,.tools,.gov{grid-template-columns:1fr}
     .figs{grid-template-columns:1fr 1fr}
     .chart h4 span:last-child{display:none}
     .seg .kpi{grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:6px}
@@ -293,18 +299,13 @@
 
   <section id="governance">
     <div class="wrap">
-      <div class="ch"><div class="no" data-i18n="c5">04 · Governance and controls</div><div><h2 data-i18n-html="c5_t">Clean audits, <em>controls first.</em></h2></div></div>
-      <div class="tbl reveal">
-        <table class="fig">
-          <thead><tr><th data-i18n="g_a">Area</th><th data-i18n="g_b">Evidence</th></tr></thead>
-          <tbody>
-            <tr><td><b data-i18n="g1">Fraud risk and internal controls</b></td><td data-i18n="g1d">Certified Fraud Examiner (ACFE). Cut receivables 50% through tighter controls and collections; improved a subsidiary's credit rating by 17%.</td></tr>
-            <tr><td><b data-i18n="g2">Audits across four GAAPs</b></td><td data-i18n="g2d">Closes and audits under US GAAP, IFRS, JGAAP and HK GAAP with Deloitte, Mazars, BDO, RSM and PKF.</td></tr>
-            <tr><td><b data-i18n="g3">Board and governance reporting</b></td><td data-i18n="g3d">Board reporting, valuation and KPI framework aligned with public-company governance standards, built for capital raising and IPO or exit readiness.</td></tr>
-            <tr><td><b data-i18n="g4">Legal structuring</b></td><td data-i18n="g4d">Joint ventures and development projects through project-specific SPEs; audit preparation and Japanese statutory filings across multiple entities.</td></tr>
-            <tr><td><b data-i18n="g5">AI with controls</b></td><td data-i18n="g5d">Every tool keeps an audit trail, respects delegation of authority and cites its sources; AI assistants answer "not available" instead of guessing.</td></tr>
-          </tbody>
-        </table>
+      <div class="ch"><div class="no" data-i18n="c5">04 · Governance</div><div><h2 data-i18n-html="c5_t">Clean audits, <em>controls first.</em></h2></div></div>
+      <div class="gov reveal">
+        <div class="gc"><b data-i18n="g1">Fraud risk and controls</b><span data-i18n="g1d">Certified Fraud Examiner (ACFE). Receivables cut 50% and a subsidiary's credit rating raised 17%.</span></div>
+        <div class="gc"><b data-i18n="g2">Audits in four GAAPs</b><span data-i18n="g2d">Closes and audits under US GAAP, IFRS, JGAAP and HK GAAP with Deloitte, Mazars, BDO, RSM and PKF.</span></div>
+        <div class="gc"><b data-i18n="g3">Board reporting</b><span data-i18n="g3d">Board pack, valuation and KPI framework to public-company standards, ready for a raise, IPO or exit.</span></div>
+        <div class="gc"><b data-i18n="g4">Legal structuring</b><span data-i18n="g4d">Joint ventures and development projects through project SPEs; audits and statutory filings across entities.</span></div>
+        <div class="gc"><b data-i18n="g5">AI with controls</b><span data-i18n="g5d">Every tool keeps an audit trail, follows delegation of authority and cites its sources. No guessing.</span></div>
       </div>
     </div>
   </section>
@@ -313,27 +314,24 @@
     <div class="wrap">
       <div class="ch"><div class="no" data-i18n="c6">05 · Notes</div><h2 data-i18n-html="c6_t">Competencies, education <em>and credentials.</em></h2></div>
       <div class="notes">
-        <div class="note reveal"><h3><span>5.1</span><span data-i18n="nt1">Core competencies</span></h3>
-          <ul class="grid2">
-            <li><b data-i18n="cp1">Financial strategy and FP&amp;A</b></li><li><b data-i18n="cp2">Multi-entity close and consolidation</b></li>
-            <li><b data-i18n="cp3">Treasury, cash and working capital</b></li><li><b data-i18n="cp4">APAC tax and transfer pricing</b></li>
-            <li><b data-i18n="cp5">Capital raising and equity story</b></li><li><b data-i18n="cp6">Cross-border M&amp;A and due diligence</b></li>
-            <li><b data-i18n="cp7">JV, SPE and deal structuring</b></li><li><b data-i18n="cp8">IPO and exit readiness</b></li>
-            <li><b data-i18n="cp9">Board and governance reporting</b></li><li><b data-i18n="cp10">Internal controls and fraud risk</b></li>
-            <li><b data-i18n="cp11">AI tools and finance automation</b></li><li><b data-i18n="cp12">Leading distributed teams</b></li>
+        <div class="note wide reveal"><h3><span>5.1</span><span data-i18n="nt1">Core competencies</span></h3>
+          <ul class="grid4">
+            <li><b data-i18n="cp1">Financial strategy and FP&amp;A</b></li><li><b data-i18n="cp3">Treasury, cash and working capital</b></li><li><b data-i18n="cp5">Capital raising and equity story</b></li><li><b data-i18n="cp9">Board and governance reporting</b></li>
+            <li><b data-i18n="cp2">Multi-entity close and consolidation</b></li><li><b data-i18n="cp4">APAC tax and transfer pricing</b></li><li><b data-i18n="cp6">Cross-border M&amp;A and due diligence</b></li><li><b data-i18n="cp10">Internal controls and fraud risk</b></li>
+            <li><b data-i18n="cp7">JV, SPE and deal structuring</b></li><li><b data-i18n="cp8">IPO and exit readiness</b></li><li><b data-i18n="cp11">AI tools and finance automation</b></li><li><b data-i18n="cp12">Leading distributed teams</b></li>
           </ul></div>
         <div class="note reveal"><h3><span>5.2</span><span data-i18n="nt2">Education</span></h3>
           <ul>
             <li><b data-i18n="e1">Executive Postgraduate, Financial Management</b><span>ESIC · 2015</span></li>
-            <li><b data-i18n="e2">Degree in Business Administration (4-year)</b><span data-i18n="e2s">Univ. de Zaragoza · 2012</span></li>
             <li><b data-i18n="e3">Financial Advising and Wealth Management</b><span>CESTE · 2020</span></li>
+            <li><b data-i18n="e2">Degree in Business Administration (4-year)</b><span data-i18n="e2s">Univ. de Zaragoza · 2012</span></li>
           </ul></div>
         <div class="note reveal"><h3><span>5.3</span><span data-i18n="nt3">Certifications and authorship</span></h3>
           <ul>
             <li><b>Certified Fraud Examiner (CFE)</b><span>ACFE</span></li>
-            <li><b>Financial Planning &amp; Analysis Modeling (CFPAM™)</b></li>
-            <li><b>Certified Product Manager (FH)</b></li>
-            <li><b>Fathom Advisor</b></li>
+            <li><b>Financial Planning &amp; Analysis Modeling (CFPAM™)</b><span data-i18n="cert">Certification</span></li>
+            <li><b>Certified Product Manager (FH)</b><span data-i18n="cert2">Certification</span></li>
+            <li><b>Fathom Advisor</b><span data-i18n="cert3">Certification</span></li>
             <li><b data-i18n="au">Author, "A to Z of Financial Terms"</b><span>Amazon · 2021</span></li>
           </ul></div>
         <div class="note reveal"><h3><span>5.4</span><span data-i18n="nt4">Languages and systems</span></h3>
@@ -405,17 +403,18 @@ const T = { es: {
   ap1d:"para generar un informe de gestión, con automatización construida internamente con IA",
   ap2:"Obligatoria", ap2d:"formación en IA de Anthropic para el equipo contable; la soltura con IA es criterio de contratación",
   ap3d:"conjunto de datos de resultados y KPIs conciliado para 13 hoteles, que alimenta la plataforma de analítica con IA del grupo",
-  c5:"04 · Gobierno y control", c5_t:"Auditorías limpias, <em>control primero.</em>", g_a:"Área", g_b:"Evidencia",
-  g1:"Riesgo de fraude y control interno", g1d:"Certified Fraud Examiner (ACFE). Reduje las cuentas a cobrar un 50% con controles y gestión de cobros más estrictos; mejoré un 17% el rating crediticio de una filial.",
-  g2:"Auditorías con cuatro normativas", g2d:"Cierres y auditorías bajo US GAAP, NIIF, JGAAP y HK GAAP con Deloitte, Mazars, BDO, RSM y PKF.",
-  g3:"Reporting al consejo y gobierno", g3d:"Reporting al consejo, valoración y marco de KPIs alineados con estándares de empresa cotizada, preparados para levantar capital y para una salida a bolsa o venta.",
-  g4:"Estructuración legal", g4d:"Joint ventures y proyectos de desarrollo mediante SPEs por proyecto; preparación de auditorías y obligaciones legales japonesas en varias sociedades.",
-  g5:"IA con control", g5d:"Cada herramienta guarda su pista de auditoría, respeta la delegación de autoridad y cita sus fuentes; los asistentes responden \"no disponible\" en lugar de inventar.",
+  c5:"04 · Gobierno", c5_t:"Auditorías limpias, <em>control primero.</em>",
+  g1:"Riesgo de fraude y control", g1d:"Certified Fraud Examiner (ACFE). Cuentas a cobrar −50% y rating crediticio de una filial +17%.",
+  g2:"Auditorías en cuatro normativas", g2d:"Cierres y auditorías bajo US GAAP, NIIF, JGAAP y HK GAAP con Deloitte, Mazars, BDO, RSM y PKF.",
+  g3:"Reporting al consejo", g3d:"Reporting, valoración y KPIs con estándares de cotizada, listos para una ronda, una salida a bolsa o una venta.",
+  g4:"Estructuración legal", g4d:"Joint ventures y proyectos de desarrollo mediante SPEs; auditorías y obligaciones legales en varias sociedades.",
+  g5:"IA con control", g5d:"Cada herramienta guarda pista de auditoría, respeta la delegación de autoridad y cita sus fuentes. Sin inventar.",
   c6:"05 · Notas", c6_t:"Competencias, formación <em>y credenciales.</em>", nt1:"Competencias clave", nt2:"Formación", nt3:"Certificaciones y publicaciones", nt4:"Idiomas y sistemas",
   cp1:"Estrategia financiera y FP&A", cp2:"Cierre y consolidación multisociedad", cp3:"Tesorería, caja y circulante", cp4:"Fiscalidad APAC y precios de transferencia",
   cp5:"Captación de capital y equity story", cp6:"M&A transfronterizo y due diligence", cp7:"Estructuración de JV, SPE y operaciones", cp8:"Preparación para salida a bolsa o venta",
   cp9:"Reporting al consejo y gobierno", cp10:"Control interno y riesgo de fraude", cp11:"Herramientas de IA y automatización financiera", cp12:"Dirección de equipos distribuidos",
   e1:"Posgrado ejecutivo en Dirección Financiera", e2:"Licenciatura en Administración de Empresas (4 años)", e2s:"Univ. de Zaragoza · 2012", e3:"Asesoramiento Financiero y Gestión Patrimonial",
+  cert:"Certificación", cert2:"Certificación", cert3:"Certificación",
   au:"Autor de \"A to Z of Financial Terms\"",
   la1:"Español", la1s:"nativo", la2:"Inglés · Alemán", la2s:"fluido", la3:"Mandarín", la3s:"nivel profesional", la4:"Italiano", la4s:"básico", sy:"Sistemas",
   ir_e:"Email", ft:"Diseñado y construido con IA · cada gráfico es código en vivo"
@@ -428,11 +427,11 @@ const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 window.drawCareer = function(){
   const es = document.documentElement.lang === 'es';
   const ROLES = [
-    [2013 + 4/12, 2014 + 5/12, 'Financial Controller · Grupo Sesé', 'Frankfurt', '#9AA8BC'],
-    [2014 + 5/12, 2016 + 5/12, 'Deputy CFO · Grupo Sesé HQ', 'Zaragoza', '#5B7BA8'],
-    [2016 + 5/12, 2018, es ? 'CFO filial EE. UU. · Grupo Sesé' : 'CFO, U.S. subsidiary · Grupo Sesé', 'Chattanooga', '#5B7BA8'],
-    [2018, 2023 + 8/12, 'CFO · GoGo World', es ? 'Tokio' : 'Tokyo', '#1B3A6B'],
-    [2023 + 8/12, 2026 + 9/12, 'CFO · Wayfarer', es ? 'Tokio' : 'Tokyo', '#2F6FED']
+    [2013 + 4/12, 2014 + 5/12, 'Financial Controller · Grupo Sesé', es ? 'Fráncfort' : 'Frankfurt', '#9AA8BC'],
+    [2014 + 5/12, 2016 + 5/12, es ? 'Director financiero adjunto · Grupo Sesé' : 'Deputy Chief Financial Officer · Grupo Sesé', 'Zaragoza', '#5B7BA8'],
+    [2016 + 5/12, 2018, es ? 'Director financiero · Grupo Sesé EE. UU.' : 'Chief Financial Officer · Grupo Sesé USA', 'Chattanooga', '#5B7BA8'],
+    [2018, 2023 + 8/12, es ? 'Director financiero · GoGo World' : 'Chief Financial Officer · GoGo World', es ? 'Tokio' : 'Tokyo', '#1B3A6B'],
+    [2023 + 8/12, 2026 + 9/12, es ? 'Director financiero · Wayfarer' : 'Chief Financial Officer · Wayfarer', es ? 'Tokio' : 'Tokyo', '#2F6FED']
   ];
   const L = 12, R = 708, top = 16, row = 34, x = y => L + (y - 2013) / (2026.83 - 2013) * (R - L);
   let s = '';
@@ -440,7 +439,7 @@ window.drawCareer = function(){
     s += `<line x1="${xx}" x2="${xx}" y1="${top - 6}" y2="${top + ROLES.length * row + 4}" stroke="${y % 2 ? '#F0F2F5' : '#E8EBF0'}"/>`;
     if (y % 2 === 1 || y === 2026) s += `<text x="${xx}" y="${top + ROLES.length * row + 22}" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="11" fill="#5B6675">${y}</text>`; }
   ROLES.forEach(([a, b, lab, city, col], i) => {
-    const y0 = top + i * row, xa = x(a), xb = x(b), w = Math.max(4, xb - xa), right = xa > 420;
+    const y0 = top + i * row, xa = x(a), xb = x(b), w = Math.max(4, xb - xa), right = (xa - L) > (R - xb);
     s += `<g class="bar"><rect x="${xa}" y="${y0}" width="${w}" height="18" fill="${col}" rx="1"/>`
       + `<text x="${right ? xa - 8 : xb + 8}" y="${y0 + 13}" text-anchor="${right ? 'end' : 'start'}" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="12.5" fill="#0E1726">${lab}<tspan fill="#5B6675"> · ${city}</tspan></text></g>`;
   });
@@ -470,7 +469,7 @@ if ('IntersectionObserver' in window && !reduce) io = new IntersectionObserver(e
 window.PrizmaReveal = els => els.forEach(el => { el.classList.add('reveal'); io ? io.observe(el) : el.classList.add('shown'); });
 </script>
 <script src="previews.js?v=6"></script>
-<script src="portfolio.js?v=12"></script>
+<script src="portfolio.js?v=13"></script>
 <script>
 let saved = null; try { saved = localStorage.getItem('jm-lang'); } catch(e){}
 setLang(saved === 'es' ? 'es' : 'en');
