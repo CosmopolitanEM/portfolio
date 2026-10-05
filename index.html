@@ -95,16 +95,16 @@
   table.fig td.n{font:400 12px var(--mono);color:var(--steel);white-space:nowrap}
   table.fig td small{display:block;color:var(--steel);font-size:13.5px;margin-top:2px}
 
-  .seg{display:grid;grid-template-columns:260px 1fr;gap:36px;padding:26px 0;border-top:1px solid var(--mist)}
+  .seg{display:grid;gap:20px;padding:30px 0;border-top:1px solid var(--mist)}
   .seg:first-child{border-top:0;padding-top:0}
   .seg .when{font:500 12px var(--mono);letter-spacing:.06em;color:var(--steel)}
   .seg .label{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--navy);margin-top:6px}
   .seg h3{font-size:clamp(24px,2.3vw,32px);line-height:1.05;margin:6px 0 4px}
   .seg .where{font-size:14px;color:var(--steel)}
-  .seg .kpi{margin-top:20px;border-top:2px solid var(--ink)}
-  .seg .kpi div{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:6px 0;border-bottom:1px solid var(--mist)}
+  .seg .kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+  .seg .kpi div{display:flex;flex-direction:column;gap:6px;padding:14px 16px;background:var(--sheet);border:1px solid var(--mist);border-top:2px solid var(--ink)}
   .seg .kpi b{font:500 28px var(--serif);color:var(--signal);white-space:nowrap}
-  .seg .kpi span{font-size:13px;color:var(--steel);text-align:right}
+  .seg .kpi span{font-size:13px;line-height:1.35;color:var(--steel)}
   .seg .ctx{font-family:var(--serif);font-size:17.5px;line-height:1.45;margin-bottom:12px}
   .seg ul{list-style:none;display:grid;gap:6px;border-top:1px solid var(--ink);padding-top:14px}
   .seg li{font-size:14.5px;color:var(--body);padding-left:20px;position:relative}
@@ -157,7 +157,7 @@
 
   @media (max-width:1000px){
     .cover-grid,.ir,.notes,.tools{grid-template-columns:1fr}
-    .ch,.letter,.seg,.sub-h{grid-template-columns:1fr;gap:20px}
+    .ch,.letter,.sub-h{grid-template-columns:1fr;gap:20px}
     .ai-points{grid-template-columns:1fr}
     .links a.hide-m{display:none}
     section{padding:72px 0}

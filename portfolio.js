@@ -109,13 +109,13 @@
       if (c.gap) return `<p class="gap">${esc(c.gap[l])}</p>`;
       const d = c[l];
       return `<article class="seg">
-        <div>
+        <header>
           <span class="when">${esc(l === 'es' ? c.whenEs : c.when)}</span>
           <div class="label">${esc(d.label)}</div>
           <h3>${esc(d.t)}</h3>
           <div class="where">${esc(d.where)}</div>
-          <div class="kpi">${d.kpi.map(([v, s]) => `<div><b>${esc(v)}</b><span>${esc(s)}</span></div>`).join('')}</div>
-        </div>
+        </header>
+        <div class="kpi">${d.kpi.map(([v, s]) => `<div><b>${esc(v)}</b><span>${esc(s)}</span></div>`).join('')}</div>
         <div><p class="ctx">${esc(d.ctx)}</p><ul>${d.pts.map(p => `<li>${esc(p)}</li>`).join('')}</ul></div>
       </article>`; }).join('');
     const fig = l === 'es' ? 'Figura' : 'Figure', smp = l === 'es' ? 'Datos de ejemplo' : 'Sample data';
