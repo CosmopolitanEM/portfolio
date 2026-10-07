@@ -11,7 +11,7 @@
   @font-face{font-family:InterPrint;font-weight:600;src:url(.build-fonts/inter-600.ttf)}
   @font-face{font-family:InterPrint;font-weight:700;src:url(.build-fonts/inter-700.ttf)}
   /* Printable CV, rendered to PDF. Same content and grid as the portfolio page. */
-  @page{size:A4;margin:14mm 15mm 14mm}
+  @page{size:A4;margin:12mm 15mm 11mm}
   :root{--ink:#0E1726;--navy:#1B3A6B;--signal:#2F6FED;--steel:#5B6675;--mist:#D6DBE3;--sheet:#FFFFFF;--body:#2C3646;--gap:3.2mm;
         --font:InterPrint,Inter,"Segoe UI","Helvetica Neue",Arial,sans-serif}
   *{box-sizing:border-box;margin:0;padding:0}
@@ -27,13 +27,13 @@
   .seal{width:23mm;height:23mm;border-radius:50%;overflow:hidden;filter:grayscale(1);border:.6pt solid var(--mist)}
   .seal img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
   .sum{margin-top:3.5mm;font-size:10pt;line-height:1.5;text-align:justify;hyphens:auto}
-  section{margin-top:5mm}
+  section{margin-top:4.2mm}
   h2{font:600 8pt var(--font);text-transform:uppercase;color:var(--navy);border-top:1.5pt solid var(--navy);padding-top:1.6mm;margin-bottom:2.6mm}
-  .figs{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap)}
+  .figs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap)}
   .fc{border:.6pt solid var(--mist);border-top:1.4pt solid var(--ink);padding:2mm 2.6mm}
   .fc b{display:block;font:600 13pt/1.1 var(--font);white-space:nowrap}
   .fc b.hl{color:var(--signal)}
-  .fc span{display:block;font-size:8pt;line-height:1.3;color:var(--steel);margin-top:.6mm}
+  .fc span{display:block;font-size:7.8pt;line-height:1.3;color:var(--steel);margin-top:.6mm;white-space:nowrap}
   .job{break-inside:avoid;padding:2.6mm 0 1mm;border-top:.6pt solid var(--mist)}
   .job:first-of-type{border-top:0;padding-top:0}
   .jh{display:flex;justify-content:space-between;align-items:baseline;gap:4mm}
@@ -45,20 +45,20 @@
   .job li{display:grid;grid-template-columns:31mm 1fr;gap:var(--gap);padding:.6mm 0;font-size:9pt;color:var(--body)}
   .job li b{font:600 7.5pt/1.9 var(--font);text-transform:uppercase;color:var(--navy)}
   .job li span{text-align:justify;hyphens:auto}
-  .comp{display:grid;grid-template-columns:repeat(4,1fr);gap:1mm var(--gap);list-style:none;font-size:8.8pt;font-weight:500}
+  .comp{display:grid;grid-template-columns:repeat(3,1fr);gap:1mm var(--gap);list-style:none;font-size:8.8pt;font-weight:500}
   .comp li{padding:1mm 0;border-bottom:.6pt solid var(--mist)}
-  .notes{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap)}
+  .notes{display:grid;grid-template-columns:repeat(2,1fr);gap:4mm 6mm}
   .notes h4{font:600 8pt var(--font);text-transform:uppercase;color:var(--ink);padding-bottom:1mm;border-bottom:1pt solid var(--ink)}
   .notes ul{list-style:none}
-  .notes li{padding:1.2mm 0;border-bottom:.6pt solid var(--mist);font-size:8.8pt;font-weight:500;line-height:1.3}
-  .notes li span{display:block;font-size:7.8pt;font-weight:400;color:var(--steel)}
+  .notes li{display:flex;justify-content:space-between;align-items:baseline;gap:4mm;padding:1.2mm 0;border-bottom:.6pt solid var(--mist);font-size:8.8pt;font-weight:500;line-height:1.3}
+  .notes li span{font-size:8pt;font-weight:400;color:var(--steel);text-align:right;white-space:nowrap}
   .keep{break-inside:avoid}
   @media screen{body{padding:12mm 0;background:#F5F6F8}.page{background:#fff;padding:14mm 15mm;max-width:210mm;box-shadow:0 0 0 1px #D6DBE3}}
 </style>
 </head>
 <body>
 <div class="page" id="cv"></div>
-<script src="portfolio.js?v=16"></script>
+<script src="portfolio.js?v=17"></script>
 <script>
 const L = new URLSearchParams(location.search).get('lang') === 'es' ? 'es' : 'en';
 document.documentElement.lang = L;
@@ -67,29 +67,29 @@ const T = {
     role: 'CFE · Chief Financial Officer · APAC',
     sum: 'Chief Financial Officer with more than ten years of finance leadership, the last eight in Asia across Japan, Hong Kong and Korea. I run finance where it is hardest: multi-entity groups, several jurisdictions and the moments when the numbers decide whether a company is funded, sold or saved. Capital raising, turnarounds, cross-border M&A and audits under US GAAP, IFRS, JGAAP and HK GAAP, with an AI-first finance function built on controls. Certified Fraud Examiner.',
     h: ['Key results', 'Experience', 'Core competencies', 'Education', 'Certifications', 'Languages', 'Systems'],
-    figs: [['US$1.3M', 'Strategic investment, US$18M valuation', 1], ['US$200M+', 'Assets under management', 0], ['+4,500%', 'EBT growth in a turnaround', 1], ['US$400K+', 'Annual tax savings', 0],
-           ['−28 days', 'Cash-to-cash cycle', 0], ['US$88M', 'Syndicated loan modelled', 0], ['4+', 'Acquisitions completed', 0], ['< 30 seconds', 'To create a management report', 0]],
+    figs: [['US$1.3M', 'Strategic investment, 2026', 1], ['US$200M+', 'Assets under management', 0], ['+4,500%', 'EBT growth in a turnaround', 1], ['US$400K+', 'Annual tax savings', 0],
+           ['−28 days', 'Cash-to-cash cycle', 0], ['US$88M', 'Syndicated loan modelled', 0], ['4+', 'Acquisitions completed', 0], ['< 30 seconds', 'Management report creation', 0]],
     comp: ['Financial strategy and FP&A', 'Treasury, cash and working capital', 'Capital raising and equity story', 'Board and governance reporting',
            'Multi-entity close and consolidation', 'APAC tax and transfer pricing', 'Cross-border M&A and due diligence', 'Internal controls and fraud risk',
            'JV, SPE and deal structuring', 'IPO and exit readiness', 'AI tools and finance automation', 'Leading distributed teams'],
-    edu: [['Financial Management', 'Executive Postgraduate · ESIC · 2015'], ['Wealth Management', 'Financial Advising · CESTE · 2020'], ['Business Administration', 'Degree · Univ. de Zaragoza · 2012']],
+    edu: [['Wealth Management', 'Financial Advising · CESTE · 2020'], ['Financial Management', 'Executive Postgraduate · ESIC · 2015'], ['Business Administration', 'Degree · Univ. de Zaragoza · 2012']],
     cert: [['Certified Fraud Examiner (CFE)', 'ACFE'], ['FP&A Modeling (CFPAM™)', 'Certification'], ['Certified Product Manager (FH)', 'Certification'], ['Fathom Advisor', 'Certification']],
     lang: [['Spanish', 'native'], ['English · German', 'fluent'], ['Mandarin', 'professional working'], ['Italian', 'limited']],
-    sys: [['Microsoft Office', 'Excel · Word · PowerPoint'], ['NetSuite · Dynamics NAV', 'ERP and accounting'], ['QuickBooks · Fathom', 'Accounting and reporting'], ['Claude (MCP)', 'AI tools']]
+    sys: [['Microsoft Office', 'Excel · Word · PowerPoint'], ['NetSuite · Dynamics NAV', 'ERP and accounting'], ['QuickBooks · Fathom', 'Accounting and reporting'], ['AI tools', 'Claude · ChatGPT · Gemini · Copilot']]
   },
   es: {
     role: 'CFE · Director financiero · APAC',
     sum: 'Director financiero con más de diez años dirigiendo finanzas, los últimos ocho en Asia: Japón, Hong Kong y Corea. Dirijo finanzas donde más cuesta: grupos multisociedad, varias jurisdicciones y momentos en los que los números deciden si una empresa se financia, se vende o se salva. Captación de capital, reestructuraciones, M&A transfronterizo y auditorías bajo US GAAP, NIIF, JGAAP y HK GAAP, con una función financiera basada en IA y con el control primero. Certified Fraud Examiner.',
     h: ['Resultados clave', 'Experiencia', 'Competencias clave', 'Formación', 'Certificaciones', 'Idiomas', 'Sistemas'],
-    figs: [['1,3 M US$', 'Inversión estratégica, valoración 18 M US$', 1], ['200 M US$+', 'Activos gestionados', 0], ['+4.500%', 'Crecimiento del EBT en una reestructuración', 1], ['400K+ US$', 'Ahorro fiscal anual', 0],
-           ['−28 días', 'Ciclo de caja', 0], ['88 M US$', 'Préstamo sindicado modelado', 0], ['4+', 'Adquisiciones completadas', 0], ['< 30 segundos', 'Para crear un informe de gestión', 0]],
+    figs: [['1,3 M US$', 'Inversión estratégica, 2026', 1], ['200 M US$+', 'Activos gestionados', 0], ['+4.500%', 'Crecimiento del EBT', 1], ['400K+ US$', 'Ahorro fiscal anual', 0],
+           ['−28 días', 'Ciclo de caja', 0], ['88 M US$', 'Préstamo sindicado modelado', 0], ['4+', 'Adquisiciones completadas', 0], ['< 30 segundos', 'Por informe de gestión', 0]],
     comp: ['Estrategia financiera y FP&A', 'Tesorería, caja y circulante', 'Captación de capital y equity story', 'Reporting al consejo y gobierno',
-           'Cierre y consolidación multisociedad', 'Fiscalidad APAC y precios de transferencia', 'M&A transfronterizo y due diligence', 'Control interno y riesgo de fraude',
-           'Estructuración de JV, SPE y operaciones', 'Preparación para salida a bolsa o venta', 'Herramientas de IA y automatización', 'Dirección de equipos distribuidos'],
-    edu: [['Dirección Financiera', 'Posgrado ejecutivo · ESIC · 2015'], ['Gestión Patrimonial', 'Asesoramiento financiero · CESTE · 2020'], ['Administración de Empresas', 'Licenciatura · Univ. de Zaragoza · 2012']],
+           'Cierre y consolidación multisociedad', 'Precios de transferencia en APAC', 'M&A transfronterizo y due diligence', 'Control interno y riesgo de fraude',
+           'Estructuración de JV y SPE', 'Preparación de salida a bolsa o venta', 'Herramientas de IA y automatización', 'Dirección de equipos distribuidos'],
+    edu: [['Gestión Patrimonial', 'CESTE · 2020'], ['Dirección Financiera', 'Posgrado ejecutivo · ESIC · 2015'], ['Administración de Empresas', 'Univ. de Zaragoza · 2012']],
     cert: [['Certified Fraud Examiner (CFE)', 'ACFE'], ['FP&A Modeling (CFPAM™)', 'Certificación'], ['Certified Product Manager (FH)', 'Certificación'], ['Fathom Advisor', 'Certificación']],
     lang: [['Español', 'nativo'], ['Inglés · Alemán', 'fluido'], ['Mandarín', 'nivel profesional'], ['Italiano', 'básico']],
-    sys: [['Microsoft Office', 'Excel · Word · PowerPoint'], ['NetSuite · Dynamics NAV', 'ERP y contabilidad'], ['QuickBooks · Fathom', 'Contabilidad y reporting'], ['Claude (MCP)', 'Herramientas de IA']]
+    sys: [['Microsoft Office', 'Excel · Word · PowerPoint'], ['NetSuite · Dynamics NAV', 'ERP y contabilidad'], ['QuickBooks · Fathom', 'Contabilidad y reporting'], ['Herramientas de IA', 'Claude · ChatGPT · Gemini · Copilot']]
   }
 }[L];
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
