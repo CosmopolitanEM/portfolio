@@ -397,12 +397,12 @@
 
 <footer><div class="wrap"><span>© <span id="yr"></span> Javier Munoz</span><span data-i18n="ft">Designed and built with AI · every chart is live code</span></div></footer>
 
-<script src="i18n.js?v=1"></script>
+<script src="i18n.js?v=2"></script>
 <script>
 const T = { es: {
   n2:"Cifras clave", n3:"Trayectoria", n4:"Entregables", n6:"Notas", n7:"Contacto",
   cv_role:"CFE · Director financiero · APAC",
-  cv_sub:"Más de 10 años dirigiendo finanzas. Capital, reestructuraciones y una función financiera basada en IA.",
+  cv_sub:"Más de 10 años dirigiendo finanzas. Capital, reestructuraciones y una función financiera AI-first.",
   cv_ch:"Trayectoria, 2013–2026", cv_ch2:"cuatro países · tres continentes", cv_src:"Puestos dibujados a escala por año.",
   k1:"Años dirigiendo finanzas", k2:"Liderada por Canon MJ MIRAI Fund", k3:"Activos gestionados hoy", k4:"EBT, reestructuración", k5:"Facturación, Grupo Sesé", k6:"ROI interanual",
   cta1:"Ver los entregables", cta5:"Descargar CV (PDF)", cta5b:"Descargar CV (PDF)",
@@ -422,7 +422,7 @@ const T = { es: {
   m8:"Adquisiciones completadas", m8s:"Europa y América, integradas en la consolidación NIIF",
   m9:"Creación de informes de gestión", m9s:"Automatizado con herramientas de IA propias · puesto actual", m9v:"< 30 segundos",
   c3:"03 · Trayectoria", c3_t:"Cinco puestos, <em>tres continentes.</em>", c3_p:"Cada puesto se presenta como un segmento: el contexto que me encontré y lo que cambió mientras estuve.",
-  c4:"02 · Entregables", c4_t:"Una función financiera <em>basada en IA.</em>",
+  c4:"02 · Entregables", c4_t:"Una función financiera <em>AI-first.</em>",
   rp_t:"Herramientas de <em>reporting.</em>", rp_p:"Reporting de consejo, de gestión, de consolidación y de valoración para grupos multisociedad. Con datos de ejemplo.",
   c4_p:"No compro una herramienta para cada problema. Construyo con Claude las que necesita mi equipo, le formo para usarlas con criterio y mantengo el control en todas. Las figuras son animaciones en vivo con datos de ejemplo.",
   ap1:"< 30 segundos", ap1d:"para crear un informe de gestión, con automatización propia hecha con IA",
@@ -483,7 +483,8 @@ function setLang(l){
   const NUM = { es: { 'Series A': 'Serie A', '+4,500%': '+4.500%', 'US$200M+': '200 M US$+', 'US$400K+': '400K+ US$', 'US$88M': '88 M US$', 'US$1B': '1.000 M US$' },
     de: { '+4,500%': '+4.500%', 'US$200M+': '200 Mio. US$+', 'US$400K+': '400 Tsd. US$+', 'US$88M': '88 Mio. US$', 'US$1B': '1 Mrd. US$' }, zh: { 'Series A': 'A 輪' } }[l] || {};
   document.querySelectorAll('.kf b, .fc b').forEach(b => { if (b.hasAttribute('data-i18n')) return; if (!b.dataset.en) b.dataset.en = b.textContent; b.textContent = NUM[b.dataset.en] || b.dataset.en; });
-  document.querySelectorAll('.cv-pdf').forEach(a => a.href = l === 'es' ? 'Javier-Munoz-CFO-CV-ES.pdf' : 'Javier-Munoz-CFO-CV.pdf');
+  const PDF_V = '20261007b'; // bump whenever the PDFs are rebuilt so browsers don't serve an old copy
+  document.querySelectorAll('.cv-pdf').forEach(a => a.href = (l === 'es' ? 'Javier-Munoz-CFO-CV-ES.pdf' : 'Javier-Munoz-CFO-CV.pdf') + '?v=' + PDF_V);
   document.querySelectorAll('.lang button').forEach(b => b.classList.toggle('on', b.dataset.lang === l));
   if (window.Portfolio) Portfolio.render();
   drawCareer();
