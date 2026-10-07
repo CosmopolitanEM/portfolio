@@ -102,25 +102,26 @@
   let unmounts = [];
   function render() {
     unmounts.forEach(u => u()); unmounts = [];
-    const l = document.documentElement.lang === 'es' ? 'es' : 'en';
+    const l = ['es', 'de', 'zh'].includes(document.documentElement.lang.slice(0, 2)) ? document.documentElement.lang.slice(0, 2) : 'en';
+    const X = (window.I18N && I18N[l]) || null;
     careerEl.innerHTML = CAREER.map(c => {
       if (c.gap) return `<p class="gap">${esc(c.gap[l])}</p>`;
-      const d = c[l];
+      const d = c[l] || (X && X.career[CAREER.indexOf(c)]) || c.en;
       return `<article class="seg">
         <div class="head"><span class="label">${esc(d.label)}</span><h3>${esc(d.t)}</h3></div>
-        <div class="row">${d.kpi.map(([v, s]) => `<div class="k"><b>${esc(v)}</b><span>${esc(s)}</span></div>`).join('')}<div class="m"><span class="when">${esc(l === 'es' ? c.whenEs : c.when)}</span><span class="where">${esc(d.where)}</span></div></div>
+        <div class="row">${d.kpi.map(([v, s]) => `<div class="k"><b>${esc(v)}</b><span>${esc(s)}</span></div>`).join('')}<div class="m"><span class="when">${esc(l === 'es' ? c.whenEs : (X ? X.career[CAREER.indexOf(c)].when : c.when))}</span><span class="where">${esc(d.where)}</span></div></div>
         <p class="ctx">${esc(d.ctx)}</p><ul>${d.pts.map(p => { const [h, t] = p.split('|'); return `<li><b>${esc(h)}</b><span>${esc(t)}</span></li>`; }).join('')}</ul>
       </article>`; }).join('');
-    const fig = l === 'es' ? 'Figura' : 'Figure', smp = l === 'es' ? 'Datos de ejemplo' : 'Sample data';
-    const card = (c, i, n, tag, cls) => { const d = c[l];
+    const fig = l === 'es' ? 'Figura' : X ? X.misc.Figure : 'Figure', smp = l === 'es' ? 'Datos de ejemplo' : X ? X.misc['Sample data'] : 'Sample data';
+    const card = (c, i, n, tag, cls, list) => { const d = c[l] || (X && X[list][i]) || c.en;
       return `<article class="tool">
         <figure><div class="frame"><canvas data-kind="${c.kind}" aria-hidden="true"></canvas></div><figcaption><span>${fig} 2.${n + i}</span><span>${smp}</span></figcaption></figure>
         <span class="tag ${cls}">${tag}</span><h3>${esc(d.t)}</h3><p>${esc(d.d)}</p><p class="ai">${esc(d.ai)}</p>
       </article>`; };
-    toolEl.innerHTML = TOOLS.map((c, i) => card(c, i, CONCEPTS.length + 1, l === 'es' ? 'Herramienta de IA' : 'AI tool', '')).join('');
-    conceptEl.innerHTML = CONCEPTS.map((c, i) => card(c, i, 1, 'Reporting', 'concept')).join('');
+    toolEl.innerHTML = TOOLS.map((c, i) => card(c, i, CONCEPTS.length + 1, l === 'es' ? 'Herramienta de IA' : X ? X.misc['AI tool'] : 'AI tool', '', 'tools')).join('');
+    conceptEl.innerHTML = CONCEPTS.map((c, i) => card(c, i, 1, 'Reporting', 'concept', 'concepts')).join('');
     [...conceptEl.querySelectorAll('canvas'), ...toolEl.querySelectorAll('canvas')].forEach((cv, i) => unmounts.push(PrizmaPreview.mount(cv, cv.dataset.kind, { lazy: true, offset: i * 1.4 })));
     if (window.PrizmaReveal) PrizmaReveal([...careerEl.querySelectorAll('.seg'), ...toolEl.querySelectorAll('.tool'), ...conceptEl.querySelectorAll('.tool')]);
   }
-  window.Portfolio = { render, CAREER };
+  window.Portfolio = { render, CAREER, TOOLS, CONCEPTS };
 })();

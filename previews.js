@@ -10,9 +10,9 @@
   const prog = (t, a, b) => clamp((t - a) / (b - a));
   const eo = p => 1 - Math.pow(1 - clamp(p), 3);
   const eb = p => { p = clamp(p); const c = 1.7; return 1 + (c + 1) * Math.pow(p - 1, 3) + c * Math.pow(p - 1, 2); };
-  const lang = () => (document.documentElement.lang === 'es' ? 'es' : 'en');
-  const L = (en, es) => (lang() === 'es' ? es : en);
-  const fmt = (n, d = 0) => n.toLocaleString(lang() === 'es' ? 'es-ES' : 'en-GB', { minimumFractionDigits: d, maximumFractionDigits: d });
+  const lang = () => { const l = document.documentElement.lang.slice(0, 2); return ['es', 'de', 'zh'].includes(l) ? l : 'en'; };
+  const L = (en, es) => { const l = lang(); if (l === 'es') return es; const t = window.I18N && I18N[l]; return (t && t.previews[en]) || en; };
+  const fmt = (n, d = 0) => n.toLocaleString({ es: 'es-ES', de: 'de-DE', zh: 'zh-TW' }[lang()] || 'en-GB', { minimumFractionDigits: d, maximumFractionDigits: d });
 
   function rr(g, x, y, w, h, r) { g.beginPath(); g.roundRect ? g.roundRect(x, y, w, h, r) : g.rect(x, y, w, h); }
   function txt(g, s, x, y, size, color, w = 500, fam = UI, align = 'left') {
@@ -206,7 +206,7 @@
       const p = eb(prog(t, .3 + i * .06, 1.2 + i * .06)), h = vv * k * p;
       g.fillStyle = vv < MIN ? C.red : i < 2 ? C.teal : 'rgba(27,58,107,.8)';
       rr(g, X0 + i * dx, Y0 - h, 30, h, 4); g.fill();
-      txt(g, (lang() === 'es' ? 'S' : 'W') + (i + 1), X0 + i * dx + 15, Y0 + 18, 10, C.muted, 500, MONO, 'center');
+      txt(g, ({ es: 'S', de: 'W', zh: '週' }[lang()] || 'W') + (i + 1), X0 + i * dx + 15, Y0 + 18, 10, C.muted, 500, MONO, 'center');
     });
     const mp = prog(t, 1.6, 2.4);
     g.strokeStyle = C.red; g.setLineDash([6, 5]); g.lineWidth = 1.5; g.beginPath();

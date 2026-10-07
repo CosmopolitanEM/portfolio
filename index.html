@@ -26,9 +26,9 @@
     color-scheme:light;
     --paper:#F5F6F8; --sheet:#FFFFFF; --ink:#0E1726; --navy:#1B3A6B; --signal:#2F6FED;
     --steel:#5B6675; --mist:#D6DBE3; --mist-2:#E8EBF0; --hair:#C3CAD5; --body:#2C3646;
-    --serif:"Aptos Display",Aptos,Inter,"Segoe UI","Helvetica Neue",Arial,sans-serif;
-    --sans:Aptos,Inter,"Segoe UI","Helvetica Neue",Arial,sans-serif;
-    --mono:Aptos,Inter,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+    --serif:"Aptos Display",Aptos,Inter,"PingFang TC","Microsoft JhengHei","Noto Sans TC","Segoe UI","Helvetica Neue",Arial,sans-serif;
+    --sans:Aptos,Inter,"PingFang TC","Microsoft JhengHei","Noto Sans TC","Segoe UI","Helvetica Neue",Arial,sans-serif;
+    --mono:Aptos,Inter,"PingFang TC","Microsoft JhengHei","Noto Sans TC","Segoe UI","Helvetica Neue",Arial,sans-serif;
     --max:1180px; --gap:16px; --cols:repeat(4,minmax(0,1fr));
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -203,12 +203,18 @@
     .wrap{padding-inline:16px}
     .links .btn{display:none}
     .cover-head{grid-template-columns:1fr}.seal{width:110px;order:-1}
-    .figs,.ai-points{grid-template-columns:1fr 1fr}
+    .figs,.ai-points{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .fc b,.ai-points b{font-size:14pt}
+    .fc{padding:12px}
     .chart h4 span:last-child{display:none}
+    .kf b{font-size:15pt}
+    .kf span{white-space:normal}
+    .cover-cta{grid-template-columns:1fr}
     .seg .row{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+    .seg .row .k b{white-space:normal;overflow-wrap:anywhere}
     .seg .row .m{grid-column:1/-1;order:-1;border-top:0;padding:0}
     .seg .row .k{padding:8px 10px}
-    .seg .row .k b{font-size:13pt}
+    .seg .row .k b{font-size:12pt}
     .seg li{gap:2px}
     .seg li span,.seg .ctx,.close .body p,.tool p,.gc span{text-align:left}
   }
@@ -227,7 +233,7 @@
         <a class="hide-m" href="#career" data-i18n="n3">Career</a>
         <a class="hide-m" href="#notes" data-i18n="n6">Notes</a>
         <button type="button" class="menu" aria-label="Menu" aria-expanded="false"><span></span></button>
-        <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" class="on">EN</button><button type="button" data-lang="es">ES</button></div>
+        <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" class="on">EN</button><button type="button" data-lang="es">ES</button><button type="button" data-lang="de">DE</button><button type="button" data-lang="zh">中文</button></div>
         <a class="btn solid" href="#contact" data-i18n="n7">Contact</a>
       </div>
     </nav>
@@ -391,6 +397,7 @@
 
 <footer><div class="wrap"><span>© <span id="yr"></span> Javier Munoz</span><span data-i18n="ft">Designed and built with AI · every chart is live code</span></div></footer>
 
+<script src="i18n.js?v=1"></script>
 <script>
 const T = { es: {
   n2:"Cifras clave", n3:"Trayectoria", n4:"Entregables", n6:"Notas", n7:"Contacto",
@@ -436,20 +443,21 @@ const T = { es: {
   cert:"Certificación", cert2:"Certificación", cert3:"Certificación",
   la1:"Español", la1s:"nativo", la2:"Inglés · Alemán", la2s:"fluido", la3:"Mandarín", la3s:"nivel profesional", la4:"Italiano", la4s:"básico",
   ir_e:"Email", ft:"Diseñado y construido con IA · cada gráfico es código en vivo"
-}, en: {} };
+}, de: window.I18N.de.ui, zh: window.I18N.zh.ui, en: {} };
 document.querySelectorAll('[data-i18n]').forEach(el => T.en[el.dataset.i18n] = el.textContent);
 document.querySelectorAll('[data-i18n-html]').forEach(el => T.en[el.dataset.i18nHtml] = el.innerHTML);
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // Cover chart: the career as a timeline drawn to scale (months), one row per role
 window.drawCareer = function(){
-  const es = document.documentElement.lang === 'es';
+  const lg = document.documentElement.lang.slice(0, 2), es = lg === 'es', C = (lg === 'de' || lg === 'zh') ? I18N[lg].misc.chart : null;
+  const N = (en, esv) => es ? esv : C ? C[['Grupo Sesé HQ', 'Grupo Sesé USA', 'Frankfurt', 'Tokyo', 'Zaragoza', 'Chattanooga'].indexOf(en)] || en : en;
   const ROLES = [
-    [2013 + 4/12, 2014 + 5/12, 'Grupo Sesé', es ? 'Fráncfort' : 'Frankfurt', '#9AA8BC'],
-    [2014 + 5/12, 2016 + 5/12, es ? 'Grupo Sesé, sede central' : 'Grupo Sesé HQ', 'Zaragoza', '#5B7BA8'],
-    [2016 + 5/12, 2018, es ? 'Grupo Sesé EE. UU.' : 'Grupo Sesé USA', 'Chattanooga', '#5B7BA8'],
-    [2018, 2023 + 8/12, 'GoGo World', es ? 'Tokio' : 'Tokyo', '#1B3A6B'],
-    [2023 + 8/12, 2026 + 9/12, 'Wayfarer', es ? 'Tokio' : 'Tokyo', '#2F6FED']
+    [2013 + 4/12, 2014 + 5/12, 'Grupo Sesé', N('Frankfurt', 'Fráncfort'), '#9AA8BC'],
+    [2014 + 5/12, 2016 + 5/12, N('Grupo Sesé HQ', 'Grupo Sesé, sede central'), N('Zaragoza', 'Zaragoza'), '#5B7BA8'],
+    [2016 + 5/12, 2018, N('Grupo Sesé USA', 'Grupo Sesé EE. UU.'), N('Chattanooga', 'Chattanooga'), '#5B7BA8'],
+    [2018, 2023 + 8/12, 'GoGo World', N('Tokyo', 'Tokio'), '#1B3A6B'],
+    [2023 + 8/12, 2026 + 9/12, 'Wayfarer', N('Tokyo', 'Tokio'), '#2F6FED']
   ];
   const L = 12, R = 568, top = 16, row = 34, x = y => L + (y - 2013) / (2026.83 - 2013) * (R - L);
   let s = '';
@@ -471,7 +479,10 @@ function setLang(l){
   const d = T[l] || T.en;
   document.querySelectorAll('[data-i18n]').forEach(el => { if (d[el.dataset.i18n]) el.textContent = d[el.dataset.i18n]; });
   document.querySelectorAll('[data-i18n-html]').forEach(el => { if (d[el.dataset.i18nHtml]) el.innerHTML = d[el.dataset.i18nHtml]; });
-  document.documentElement.lang = l;
+  document.documentElement.lang = l === 'zh' ? 'zh-Hant' : l;
+  const NUM = { es: { 'Series A': 'Serie A', '+4,500%': '+4.500%', 'US$200M+': '200 M US$+', 'US$400K+': '400K+ US$', 'US$88M': '88 M US$', 'US$1B': '1.000 M US$' },
+    de: { '+4,500%': '+4.500%', 'US$200M+': '200 Mio. US$+', 'US$400K+': '400 Tsd. US$+', 'US$88M': '88 Mio. US$', 'US$1B': '1 Mrd. US$' }, zh: { 'Series A': 'A 輪' } }[l] || {};
+  document.querySelectorAll('.kf b, .fc b').forEach(b => { if (b.hasAttribute('data-i18n')) return; if (!b.dataset.en) b.dataset.en = b.textContent; b.textContent = NUM[b.dataset.en] || b.dataset.en; });
   document.querySelectorAll('.cv-pdf').forEach(a => a.href = l === 'es' ? 'Javier-Munoz-CFO-CV-ES.pdf' : 'Javier-Munoz-CFO-CV.pdf');
   document.querySelectorAll('.lang button').forEach(b => b.classList.toggle('on', b.dataset.lang === l));
   if (window.Portfolio) Portfolio.render();
@@ -487,11 +498,11 @@ let io = null;
 if ('IntersectionObserver' in window && !reduce) io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('shown'); io.unobserve(e.target); } }), {threshold:.1});
 window.PrizmaReveal = els => els.forEach(el => { el.classList.add('reveal'); io ? io.observe(el) : el.classList.add('shown'); });
 </script>
-<script src="previews.js?v=6"></script>
-<script src="portfolio.js?v=19"></script>
+<script src="previews.js?v=7"></script>
+<script src="portfolio.js?v=20"></script>
 <script>
 let saved = null; try { saved = localStorage.getItem('jm-lang'); } catch(e){}
-setLang(saved === 'es' ? 'es' : 'en');
+setLang(['es', 'de', 'zh'].includes(saved) ? saved : 'en');
 PrizmaReveal(document.querySelectorAll('.reveal'));
 </script>
 </body>
