@@ -258,7 +258,7 @@
           <div class="kf">
             <div><b>10+</b><span data-i18n="k1">Years leading finance</span></div>
             <div><b>US$200M+</b><span data-i18n="k3">Assets managed today</span></div>
-            <div><b class="hl">US$1.3M</b><span data-i18n="k2">Strategic investment</span></div>
+            <div><b class="hl">Series A</b><span data-i18n="k2">Led by Canon MJ MIRAI Fund</span></div>
             <div><b class="hl">+4,500%</b><span data-i18n="k4">EBT growth, turnaround</span></div>
             <div><b>US$1B</b><span data-i18n="k5">Revenue, Grupo Sesé</span></div>
             <div><b>+7%</b><span data-i18n="k6">ROI, year on year</span></div>
@@ -276,7 +276,7 @@
     <div class="wrap">
       <div class="ch"><div class="no" data-i18n="c2">01 · Key figures</div><h2 data-i18n-html="c2_t">Results, <em>by the numbers.</em></h2></div>
       <div class="figs reveal">
-        <div class="fc"><b class="hl">US$1.3M</b><span data-i18n="m1">Strategic investment</span><small data-i18n="m1s">At a US$18M valuation · business plan and due diligence</small><i>3.1</i></div>
+        <div class="fc"><b class="hl" data-i18n="m1v">Series A</b><span data-i18n="m1">Led by Canon Marketing Japan</span><small data-i18n="m1s">MIRAI Fund, managed by Global Brain · business plan and due diligence</small><i>3.1</i></div>
         <div class="fc"><b class="">US$200M+</b><span data-i18n="m2">Assets under management</span><small data-i18n="m2s">13 hotel properties and three brands · current role</small><i>3.1</i></div>
         <div class="fc"><b class="hl">+4,500%</b><span data-i18n="m4">EBT growth</span><small data-i18n="m4s">Turnaround after two years of decline · GoGo World</small><i>3.2</i></div>
         <div class="fc"><b class="">US$400K+</b><span data-i18n="m5">Annual tax savings</span><small data-i18n="m5s">Compliant transfer-pricing structures across Asia</small><i>3.2</i></div>
@@ -397,7 +397,7 @@ const T = { es: {
   cv_role:"CFE · Director financiero · APAC",
   cv_sub:"Más de 10 años dirigiendo finanzas. Capital, reestructuraciones y una función financiera basada en IA.",
   cv_ch:"Trayectoria, 2013–2026", cv_ch2:"cuatro países · tres continentes", cv_src:"Puestos dibujados a escala por año.",
-  k1:"Años dirigiendo finanzas", k2:"Inversión estratégica", k3:"Activos gestionados hoy", k4:"EBT, reestructuración", k5:"Facturación, Grupo Sesé", k6:"ROI interanual",
+  k1:"Años dirigiendo finanzas", k2:"Liderada por Canon MJ MIRAI Fund", k3:"Activos gestionados hoy", k4:"EBT, reestructuración", k5:"Facturación, Grupo Sesé", k6:"ROI interanual",
   cta1:"Ver los entregables", cta5:"Descargar CV (PDF)", cta5b:"Descargar CV (PDF)",
   c1:"06 · Una última nota", c1_t:"Si ha llegado hasta aquí, <em>hablemos.</em>",
   l1:"Las secciones anteriores muestran las cifras, las herramientas y los cinco puestos que hay detrás. Lo que no pueden mostrar es cómo trabajo: como parte del equipo, en el puesto que el negocio necesite. Convierto los números en decisiones y construyo los sistemas que los mantienen correctos mucho después de cerrar la operación.",
@@ -405,7 +405,7 @@ const T = { es: {
   l3:"Si está preparando una ronda, una operación o una reestructuración, o quiere una función financiera que funcione con IA y con controles desde el primer día, me gustará conocerlo. Treinta minutos suelen bastar para que ambos sepamos si encajo.",
   ir_k:"Siguiente paso", ir_t2:"Una llamada de 30 minutos, cuando le venga bien.", cta3:"Reservar una llamada de 30 minutos", cta4:"Escribirme por LinkedIn",
   c2:"01 · Cifras clave", c2_t:"Resultados, <em>en cifras.</em>",
-  m1:"Inversión estratégica", m1s:"A una valoración de 18 M US$ · plan de negocio y due diligence",
+  m1v:"Serie A", m1:"Liderada por Canon Marketing Japan", m1s:"MIRAI Fund, gestionado por Global Brain · plan de negocio y due diligence",
   m2:"Activos gestionados", m2s:"13 hoteles y tres marcas · puesto actual",
   m3:"ROI interanual", m3s:"Gestión del rendimiento de activos y reasignación de capital",
   m4:"Crecimiento del EBT", m4s:"Reestructuración tras dos años de caída · GoGo World",
@@ -488,7 +488,7 @@ if ('IntersectionObserver' in window && !reduce) io = new IntersectionObserver(e
 window.PrizmaReveal = els => els.forEach(el => { el.classList.add('reveal'); io ? io.observe(el) : el.classList.add('shown'); });
 </script>
 <script src="previews.js?v=6"></script>
-<script src="portfolio.js?v=17"></script>
+<script src="portfolio.js?v=18"></script>
 <script>
 let saved = null; try { saved = localStorage.getItem('jm-lang'); } catch(e){}
 setLang(saved === 'es' ? 'es' : 'en');
