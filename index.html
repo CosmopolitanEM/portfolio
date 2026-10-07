@@ -7,16 +7,28 @@
 <meta name="description" content="Javier Munoz, CFE. Chief Financial Officer with 10+ years of finance leadership, the last eight in Asia: capital raising, turnarounds, cross-border M&A, multi-GAAP audits and an AI-first finance function.">
 <meta property="og:title" content="Javier Munoz, CFE — Chief Financial Officer, APAC">
 <meta property="og:description" content="10+ years of finance leadership. Capital, turnarounds and an AI-first finance function.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://cosmopolitanem.github.io/portfolio/">
+<meta property="og:image" content="https://cosmopolitanem.github.io/portfolio/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Javier Munoz, CFE — Chief Financial Officer, APAC">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cosmopolitanem.github.io/portfolio/og.png">
+<link rel="canonical" href="https://cosmopolitanem.github.io/portfolio/">
 <meta name="theme-color" content="#F5F6F8">
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231B3A6B'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='15' fill='%23F5F6F8' text-anchor='middle'%3EJM%3C/text%3E%3C/svg%3E">
 <style>
+  @font-face{font-family:Inter;font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/inter-latin.woff2) format("woff2")}
+  @font-face{font-family:Inter;font-style:italic;font-weight:400 700;font-display:swap;src:url(fonts/inter-latin-italic.woff2) format("woff2")}
   :root{
     color-scheme:light;
     --paper:#F5F6F8; --sheet:#FFFFFF; --ink:#0E1726; --navy:#1B3A6B; --signal:#2F6FED;
     --steel:#5B6675; --mist:#D6DBE3; --mist-2:#E8EBF0; --hair:#C3CAD5; --body:#2C3646;
-    --serif:"Aptos Display",Aptos,"Segoe UI","Helvetica Neue",Arial,sans-serif;
-    --sans:Aptos,"Segoe UI","Helvetica Neue",Arial,sans-serif;
-    --mono:Aptos,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+    --serif:"Aptos Display",Aptos,Inter,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+    --sans:Aptos,Inter,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+    --mono:Aptos,Inter,"Segoe UI","Helvetica Neue",Arial,sans-serif;
     --max:1180px; --gap:16px; --cols:repeat(4,minmax(0,1fr));
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -253,7 +265,7 @@
           </div>
           <div class="cover-cta">
             <a class="btn solid" href="#ai"><span data-i18n="cta1">See the deliverables</span><span>→</span></a>
-            <a class="btn line" href="#contact" data-i18n="cta2">Get in touch</a>
+            <a class="btn line cv-pdf" href="Javier-Munoz-CFO-CV.pdf" download><span data-i18n="cta5">Download CV (PDF)</span><span>↓</span></a>
           </div>
         </div>
       </div>
@@ -366,6 +378,7 @@
           <p class="t" data-i18n="ir_t2">A 30-minute call, at a time that suits you.</p>
           <a class="btn solid" href="mailto:fjmunoz@outlook.com?subject=30-minute%20call"><span data-i18n="cta3">Book a 30-minute call</span><span>→</span></a>
           <a class="btn line" href="https://www.linkedin.com/in/javiermunoz-cfe" target="_blank" rel="noopener" data-i18n="cta4">Message me on LinkedIn</a>
+          <a class="btn line cv-pdf" href="Javier-Munoz-CFO-CV.pdf" download><span data-i18n="cta5b">Download CV (PDF)</span><span>↓</span></a>
           <dl>
             <dt data-i18n="ir_e">Email</dt><dd><a href="mailto:fjmunoz@outlook.com">fjmunoz@outlook.com</a></dd>
             <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/javiermunoz-cfe" target="_blank" rel="noopener">linkedin.com/in/javiermunoz-cfe</a></dd>
@@ -385,7 +398,7 @@ const T = { es: {
   cv_sub:"Más de 10 años dirigiendo finanzas. Capital, reestructuraciones y una función financiera basada en IA.",
   cv_ch:"Trayectoria, 2013–2026", cv_ch2:"cuatro países · tres continentes", cv_src:"Puestos dibujados a escala por año.",
   k1:"Años dirigiendo finanzas", k2:"Inversión estratégica", k3:"Activos gestionados hoy", k4:"EBT, reestructuración", k5:"Facturación, Grupo Sesé", k6:"ROI interanual",
-  cta1:"Ver los entregables", cta2:"Contactar",
+  cta1:"Ver los entregables", cta5:"Descargar CV (PDF)", cta5b:"Descargar CV (PDF)",
   c1:"06 · Una última nota", c1_t:"Si ha llegado hasta aquí, <em>hablemos.</em>",
   l1:"Ha visto las cifras, las herramientas y los cinco puestos que hay detrás. Lo que una página no puede mostrar es cómo trabajo: junto al CEO y al consejo, convirtiendo los números en decisiones y construyendo los sistemas que los mantienen correctos mucho después de cerrar la operación.",
   l2:"Durante más de diez años, ocho de ellos en Asia, he dirigido finanzas donde más cuesta: grupos multisociedad en varias jurisdicciones y momentos en los que los números deciden si una empresa se financia, se vende o se salva.",
@@ -442,11 +455,11 @@ window.drawCareer = function(){
   let s = '';
   for (let y = 2013; y <= 2026; y++) { const xx = x(y);
     s += `<line x1="${xx}" x2="${xx}" y1="${top - 6}" y2="${top + ROLES.length * row + 4}" stroke="${y % 2 ? '#F0F2F5' : '#E8EBF0'}"/>`;
-    if (y % 2 === 1 || y === 2026) s += `<text x="${xx}" y="${top + ROLES.length * row + 22}" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="11" fill="#5B6675">${y}</text>`; }
+    if (y % 2 === 1 || y === 2026) s += `<text x="${xx}" y="${top + ROLES.length * row + 22}" text-anchor="middle" font-family="Aptos, Inter, Segoe UI, Arial, sans-serif" font-size="11" fill="#5B6675">${y}</text>`; }
   ROLES.forEach(([a, b, lab, city, col], i) => {
     const y0 = top + i * row, xa = x(a), xb = x(b), w = Math.max(4, xb - xa), right = (xa - L) > (R - xb);
     s += `<g class="bar"><rect x="${xa}" y="${y0}" width="${w}" height="18" fill="${col}" rx="1"/>`
-      + `<text x="${right ? xa - 8 : xb + 8}" y="${y0 + 13}" text-anchor="${right ? 'end' : 'start'}" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="12.5" fill="#0E1726">${lab}<tspan fill="#5B6675"> · ${city}</tspan></text></g>`;
+      + `<text x="${right ? xa - 8 : xb + 8}" y="${y0 + 13}" text-anchor="${right ? 'end' : 'start'}" font-family="Aptos, Inter, Segoe UI, Arial, sans-serif" font-size="12.5" fill="#0E1726">${lab}<tspan fill="#5B6675"> · ${city}</tspan></text></g>`;
   });
   s += `<line x1="${L}" x2="${R}" y1="${top + ROLES.length * row + 4}" y2="${top + ROLES.length * row + 4}" stroke="#0E1726"/>`;
   const svg = document.getElementById('careerChart'); svg.innerHTML = s;
@@ -459,6 +472,7 @@ function setLang(l){
   document.querySelectorAll('[data-i18n]').forEach(el => { if (d[el.dataset.i18n]) el.textContent = d[el.dataset.i18n]; });
   document.querySelectorAll('[data-i18n-html]').forEach(el => { if (d[el.dataset.i18nHtml]) el.innerHTML = d[el.dataset.i18nHtml]; });
   document.documentElement.lang = l;
+  document.querySelectorAll('.cv-pdf').forEach(a => a.href = l === 'es' ? 'Javier-Munoz-CFO-CV-ES.pdf' : 'Javier-Munoz-CFO-CV.pdf');
   document.querySelectorAll('.lang button').forEach(b => b.classList.toggle('on', b.dataset.lang === l));
   if (window.Portfolio) Portfolio.render();
   drawCareer();
@@ -474,7 +488,7 @@ if ('IntersectionObserver' in window && !reduce) io = new IntersectionObserver(e
 window.PrizmaReveal = els => els.forEach(el => { el.classList.add('reveal'); io ? io.observe(el) : el.classList.add('shown'); });
 </script>
 <script src="previews.js?v=6"></script>
-<script src="portfolio.js?v=15"></script>
+<script src="portfolio.js?v=16"></script>
 <script>
 let saved = null; try { saved = localStorage.getItem('jm-lang'); } catch(e){}
 setLang(saved === 'es' ? 'es' : 'en');

@@ -124,5 +124,5 @@
     [...conceptEl.querySelectorAll('canvas'), ...toolEl.querySelectorAll('canvas')].forEach((cv, i) => unmounts.push(PrizmaPreview.mount(cv, cv.dataset.kind, { lazy: true, offset: i * 1.4 })));
     if (window.PrizmaReveal) PrizmaReveal([...careerEl.querySelectorAll('.seg'), ...toolEl.querySelectorAll('.tool'), ...conceptEl.querySelectorAll('.tool')]);
   }
-  window.Portfolio = { render };
+  window.Portfolio = { render, CAREER };
 })();
