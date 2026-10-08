@@ -336,7 +336,7 @@
           <ul class="grid4">
             <li><b data-i18n="cp1">Financial strategy and FP&amp;A</b></li><li><b data-i18n="cp3">Treasury, cash and working capital</b></li><li><b data-i18n="cp5">Capital raising and equity story</b></li><li><b data-i18n="cp9">Board and governance reporting</b></li>
             <li><b data-i18n="cp2">Multi-entity close and consolidation</b></li><li><b data-i18n="cp4">APAC tax and transfer pricing</b></li><li><b data-i18n="cp6">Cross-border M&amp;A and due diligence</b></li><li><b data-i18n="cp10">Internal controls and fraud risk</b></li>
-            <li><b data-i18n="cp7">JV, SPE and deal structuring</b></li><li><b data-i18n="cp8">IPO and exit readiness</b></li><li><b data-i18n="cp11">AI tools and finance automation</b></li><li><b data-i18n="cp12">Leading distributed teams</b></li>
+            <li><b data-i18n="cp7">JV, SPE and deal structuring</b></li><li><b data-i18n="cp8">IPO and exit readiness</b></li><li><b data-i18n="cp11">AI tools and finance automation</b></li><li><b data-i18n="cp12">Leading multi-country finance teams</b></li>
           </ul></div>
         <div class="note reveal"><h3><span>5.2</span><span data-i18n="nt2">Education</span></h3>
           <ul>
@@ -397,7 +397,7 @@
 
 <footer><div class="wrap"><span>© <span id="yr"></span> Javier Munoz</span><span data-i18n="ft">Designed and built with AI · every chart is live code</span></div></footer>
 
-<script src="i18n.js?v=2"></script>
+<script src="i18n.js?v=3"></script>
 <script>
 const T = { es: {
   n2:"Cifras clave", n3:"Trayectoria", n4:"Entregables", n6:"Notas", n7:"Contacto",
@@ -438,7 +438,7 @@ const T = { es: {
   c6:"05 · Notas", c6_t:"Competencias, formación <em>y credenciales.</em>", nt1:"Competencias clave", nt2:"Formación", nt3:"Certificaciones", nt4:"Idiomas", nt5:"Sistemas", sy1:"ERP y contabilidad", sy2:"Contabilidad y reporting", sy3:"Herramientas de IA",
   cp1:"Estrategia financiera y FP&A", cp2:"Cierre y consolidación multisociedad", cp3:"Tesorería, caja y circulante", cp4:"Fiscalidad APAC y precios de transferencia",
   cp5:"Captación de capital y equity story", cp6:"M&A transfronterizo y due diligence", cp7:"Estructuración de JV, SPE y operaciones", cp8:"Preparación para salida a bolsa o venta",
-  cp9:"Reporting al consejo y gobierno", cp10:"Control interno y riesgo de fraude", cp11:"Herramientas de IA y automatización financiera", cp12:"Dirección de equipos distribuidos",
+  cp9:"Reporting al consejo y gobierno", cp10:"Control interno y riesgo de fraude", cp11:"Herramientas de IA y automatización financiera", cp12:"Dirección de equipos financieros multipaís",
   e1:"Dirección Financiera", e1s:"Posgrado ejecutivo · ESIC · 2015", e2:"Administración de Empresas", e2s:"Licenciatura · Univ. de Zaragoza · 2012", e3:"Gestión Patrimonial", e3s:"Asesoramiento financiero · CESTE · 2020",
   cert:"Certificación", cert2:"Certificación", cert3:"Certificación",
   la1:"Español", la1s:"nativo", la2:"Inglés · Alemán", la2s:"fluido", la3:"Mandarín", la3s:"nivel profesional", la4:"Italiano", la4s:"básico",
@@ -483,7 +483,7 @@ function setLang(l){
   const NUM = { es: { 'Series A': 'Serie A', '+4,500%': '+4.500%', 'US$200M+': '200 M US$+', 'US$400K+': '400K+ US$', 'US$88M': '88 M US$', 'US$1B': '1.000 M US$' },
     de: { '+4,500%': '+4.500%', 'US$200M+': '200 Mio. US$+', 'US$400K+': '400 Tsd. US$+', 'US$88M': '88 Mio. US$', 'US$1B': '1 Mrd. US$' }, zh: { 'Series A': 'A 輪' } }[l] || {};
   document.querySelectorAll('.kf b, .fc b').forEach(b => { if (b.hasAttribute('data-i18n')) return; if (!b.dataset.en) b.dataset.en = b.textContent; b.textContent = NUM[b.dataset.en] || b.dataset.en; });
-  const PDF_V = '20261007b'; // bump whenever the PDFs are rebuilt so browsers don't serve an old copy
+  const PDF_V = '20261008a'; // bump whenever the PDFs are rebuilt so browsers don't serve an old copy
   document.querySelectorAll('.cv-pdf').forEach(a => a.href = (l === 'es' ? 'Javier-Munoz-CFO-CV-ES.pdf' : 'Javier-Munoz-CFO-CV.pdf') + '?v=' + PDF_V);
   document.querySelectorAll('.lang button').forEach(b => b.classList.toggle('on', b.dataset.lang === l));
   if (window.Portfolio) Portfolio.render();
@@ -500,7 +500,7 @@ if ('IntersectionObserver' in window && !reduce) io = new IntersectionObserver(e
 window.PrizmaReveal = els => els.forEach(el => { el.classList.add('reveal'); io ? io.observe(el) : el.classList.add('shown'); });
 </script>
 <script src="previews.js?v=7"></script>
-<script src="portfolio.js?v=20"></script>
+<script src="portfolio.js?v=21"></script>
 <script>
 let saved = null; try { saved = localStorage.getItem('jm-lang'); } catch(e){}
 setLang(['es', 'de', 'zh'].includes(saved) ? saved : 'en');
