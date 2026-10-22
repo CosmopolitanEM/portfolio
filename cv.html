@@ -25,7 +25,7 @@
   .contact{margin-top:2.2mm;font-size:8.5pt;color:var(--steel)}
   .contact a{color:var(--ink);text-decoration:none}
   .seal{width:23mm;height:23mm;border-radius:50%;overflow:hidden;filter:grayscale(1);border:.6pt solid var(--mist)}
-  .seal img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
+  .seal img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
   .sum{margin-top:3.5mm;font-size:10pt;line-height:1.5;text-align:justify;hyphens:auto}
   section{margin-top:4.2mm}
   h2{font:600 8pt var(--font);text-transform:uppercase;color:var(--navy);border-top:1.5pt solid var(--navy);padding-top:1.6mm;margin-bottom:2.6mm}
@@ -108,7 +108,7 @@ document.getElementById('cv').innerHTML = `
       <p class="role">${esc(T.role)}</p>
       <p class="contact"><a href="mailto:fjmunoz@outlook.com">fjmunoz@outlook.com</a> · <a href="https://www.linkedin.com/in/javiermunoz-cfe">linkedin.com/in/javiermunoz-cfe</a> · <a href="https://javiermunoz.finance/">javiermunoz.finance</a></p>
     </div>
-    <div class="seal"><img src="javier.png" alt=""></div>
+    <div class="seal"><img src="javier.jpg" alt=""></div>
   </header>
   <p class="sum">${esc(T.sum)}</p>
   <section class="keep"><h2>${T.h[0]}</h2><div class="figs">${T.figs.map(([v, s, hl]) => `<div class="fc"><b class="${hl ? 'hl' : ''}">${esc(v)}</b><span>${esc(s)}</span></div>`).join('')}</div></section>
