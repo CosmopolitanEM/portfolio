@@ -252,7 +252,7 @@
           <p class="role" data-i18n="cv_role">CFE · Chief Financial Officer · APAC</p>
           <p class="sub" data-i18n="cv_sub">10+ years of finance leadership. Capital, turnarounds and an AI-first finance function.</p>
         </div>
-        <div class="seal"><img src="javier.jpg?v=2" alt="Javier Munoz"></div>
+        <div class="seal"><img src="javier.jpg?v=3" alt="Javier Munoz"></div>
       </div>
       <div class="cover-grid">
         <div class="chart">
@@ -483,7 +483,7 @@ function setLang(l){
   const NUM = { es: { 'Series A': 'Serie A', '+4,500%': '+4.500%', 'US$200M+': '200 M US$+', 'US$400K+': '400K+ US$', 'US$88M': '88 M US$', 'US$1B': '1.000 M US$' },
     de: { '+4,500%': '+4.500%', 'US$200M+': '200 Mio. US$+', 'US$400K+': '400 Tsd. US$+', 'US$88M': '88 Mio. US$', 'US$1B': '1 Mrd. US$' }, zh: { 'Series A': 'A 輪' } }[l] || {};
   document.querySelectorAll('.kf b, .fc b').forEach(b => { if (b.hasAttribute('data-i18n')) return; if (!b.dataset.en) b.dataset.en = b.textContent; b.textContent = NUM[b.dataset.en] || b.dataset.en; });
-  const PDF_V = '20261022b'; // bump whenever the PDFs are rebuilt so browsers don't serve an old copy
+  const PDF_V = '20261107a'; // bump whenever the PDFs are rebuilt so browsers don't serve an old copy
   document.querySelectorAll('.cv-pdf').forEach(a => a.href = (l === 'es' ? 'Javier-Munoz-CFO-CV-ES.pdf' : 'Javier-Munoz-CFO-CV.pdf') + '?v=' + PDF_V);
   document.querySelectorAll('.lang button').forEach(b => b.classList.toggle('on', b.dataset.lang === l));
   if (window.Portfolio) Portfolio.render();
